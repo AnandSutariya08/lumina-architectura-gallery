@@ -4,9 +4,9 @@ import logo from "@/assets/image_1782473633448.png";
 import { CATEGORIES } from "@/lib/lumere-data";
 
 const NAV: { label: string; to: string; hasDropdown?: boolean }[] = [
+  { label: "About", to: "/about" },
   { label: "Collections", to: "/collections", hasDropdown: true },
   { label: "Projects", to: "/projects" },
-  { label: "About", to: "/about" },
   { label: "Journal", to: "/blog" },
   { label: "FAQ", to: "/faq" },
   { label: "Contact", to: "/contact" },
