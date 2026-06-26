@@ -1,4 +1,4 @@
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero } from "@/components/lumere/PageHero";
 import { CATEGORIES } from "@/lib/lumere-data";
 
@@ -62,5 +62,3 @@ function CollectionsPage() {
   );
 }
 
-// Touch notFound to keep type-aware import in case used later
-export const _unused = notFound;
