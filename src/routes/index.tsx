@@ -9,6 +9,7 @@ import { Testimonials } from "@/components/lumere/Testimonials";
 import { Values } from "@/components/lumere/Values";
 import { WhyChooseUs } from "@/components/lumere/WhyChooseUs";
 import { FAQ } from "@/components/lumere/FAQ";
+import { Gallery } from "@/components/lumere/Gallery";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -37,6 +38,7 @@ function Index() {
       <Signature />
       <BestSellers />
       <About />
+      <Gallery />
       <Projects />
       <Testimonials />
       <Values />
