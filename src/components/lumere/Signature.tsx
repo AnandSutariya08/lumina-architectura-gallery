@@ -29,44 +29,32 @@ export function Signature() {
         </div>
 
         <div className="space-y-32 md:space-y-48">
-          {ROWS.map((r, i) => {
-            const ref = useReveal<HTMLDivElement>();
-            const reverse = i % 2 === 1;
-            return (
-              <div
-                key={r.title}
-                ref={ref}
-                className="reveal grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-center"
-              >
-                <div className={`md:col-span-7 ${reverse ? "md:order-2" : ""}`}>
-                  <div className="overflow-hidden aspect-[4/3]">
-                    <img
-                      src={r.img}
-                      alt={r.title}
-                      loading="lazy"
-                      width={1600}
-                      height={1200}
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-                </div>
-                <div className={`md:col-span-5 ${reverse ? "md:order-1 md:pr-10" : "md:pl-10"}`}>
-                  <p className="eyebrow mb-6">{r.chapter}</p>
-                  <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-8 leading-[1.05]">
-                    {r.title}
-                  </h3>
-                  <p className="text-base md:text-lg leading-relaxed text-muted-foreground max-w-md mb-10">
-                    {r.body}
-                  </p>
-                  <a href="#bestsellers" className="link-underline text-[11px] uppercase tracking-[0.28em]">
-                    Explore Collection →
-                  </a>
-                </div>
-              </div>
-            );
-          })}
+          {ROWS.map((r, i) => (
+            <Row key={r.title} row={r} reverse={i % 2 === 1} />
+          ))}
         </div>
       </div>
     </section>
+  );
+}
+
+function Row({ row: r, reverse }: { row: typeof ROWS[number]; reverse: boolean }) {
+  const ref = useReveal<HTMLDivElement>();
+  return (
+    <div ref={ref} className="reveal grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-center">
+      <div className={`md:col-span-7 ${reverse ? "md:order-2" : ""}`}>
+        <div className="overflow-hidden aspect-[4/3]">
+          <img src={r.img} alt={r.title} loading="lazy" width={1600} height={1200} className="h-full w-full object-cover" />
+        </div>
+      </div>
+      <div className={`md:col-span-5 ${reverse ? "md:order-1 md:pr-10" : "md:pl-10"}`}>
+        <p className="eyebrow mb-6">{r.chapter}</p>
+        <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-8 leading-[1.05]">{r.title}</h3>
+        <p className="text-base md:text-lg leading-relaxed text-muted-foreground max-w-md mb-10">{r.body}</p>
+        <a href="#bestsellers" className="link-underline text-[11px] uppercase tracking-[0.28em]">
+          Explore Collection →
+        </a>
+      </div>
+    </div>
   );
 }
