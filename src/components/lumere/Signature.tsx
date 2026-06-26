@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { useReveal } from "@/hooks/use-reveal";
 import crystal from "@/assets/signature-crystal.jpg";
 import modern from "@/assets/signature-modern.jpg";
@@ -51,9 +52,9 @@ function Row({ row: r, reverse }: { row: typeof ROWS[number]; reverse: boolean }
         <p className="eyebrow mb-6">{r.chapter}</p>
         <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-8 leading-[1.05]">{r.title}</h3>
         <p className="text-base md:text-lg leading-relaxed text-muted-foreground max-w-md mb-10">{r.body}</p>
-        <a href="#bestsellers" className="link-underline text-[11px] uppercase tracking-[0.28em]">
+        <Link to="/collections" className="link-underline text-[11px] uppercase tracking-[0.28em]">
           Explore Collection →
-        </a>
+        </Link>
       </div>
     </div>
   );

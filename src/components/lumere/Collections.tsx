@@ -1,18 +1,10 @@
+import { Link } from "@tanstack/react-router";
 import { useReveal } from "@/hooks/use-reveal";
-import chand from "@/assets/collection-chandeliers.jpg";
-import pend from "@/assets/collection-pendants.jpg";
-import wall from "@/assets/collection-wall.jpg";
-import floor from "@/assets/collection-floor.jpg";
-
-const ITEMS = [
-  { title: "Luxury Chandeliers", count: "24 pieces", img: chand },
-  { title: "Pendant Lighting", count: "36 pieces", img: pend },
-  { title: "Wall Sconces", count: "18 pieces", img: wall },
-  { title: "Floor & Table Lamps", count: "29 pieces", img: floor },
-];
+import { CATEGORIES } from "@/lib/lumere-data";
 
 export function Collections() {
   const ref = useReveal<HTMLDivElement>();
+  const items = CATEGORIES.slice(0, 4);
   return (
     <section id="collections" className="bg-background py-28 md:py-40">
       <div ref={ref} className="reveal mx-auto max-w-[1600px] px-6 md:px-10 lg:px-14">
@@ -24,21 +16,22 @@ export function Collections() {
               <span className="text-muted-foreground italic font-light">architectural by design.</span>
             </h2>
           </div>
-          <a href="#bestsellers" className="link-underline text-[11px] uppercase tracking-[0.28em]">
-            View all collections
-          </a>
+          <Link to="/collections" className="link-underline text-[11px] uppercase tracking-[0.28em]">
+            View all collections →
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-20 md:gap-y-28">
-          {ITEMS.map((it, i) => (
-            <a
-              key={it.title}
-              href="#bestsellers"
+          {items.map((it, i) => (
+            <Link
+              key={it.slug}
+              to="/collections/$category"
+              params={{ category: it.slug }}
               className={`group block ${i % 2 === 1 ? "md:mt-24" : ""}`}
             >
               <div className="relative overflow-hidden bg-bone aspect-[4/5]">
                 <img
-                  src={it.img}
+                  src={it.image}
                   alt={it.title}
                   loading="lazy"
                   width={1200}
@@ -56,7 +49,7 @@ export function Collections() {
                   Explore →
                 </span>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

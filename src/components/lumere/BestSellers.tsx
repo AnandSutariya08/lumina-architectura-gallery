@@ -1,23 +1,9 @@
 import { useReveal } from "@/hooks/use-reveal";
-import p1 from "@/assets/product-1.jpg";
-import p2 from "@/assets/product-2.jpg";
-import p3 from "@/assets/product-3.jpg";
-import p4 from "@/assets/product-4.jpg";
-
-const PRODUCTS = [
-  { name: "Aurelia Empire", collection: "Crystal", finish: "Aged Brass", price: "On Request", code: "AUR-014", img: p1 },
-  { name: "Orbit Pendant", collection: "Modern", finish: "Brushed Brass · Opal", price: "$1,840", code: "ORB-208", img: p2 },
-  { name: "Couture Table Lamp", collection: "Atelier", finish: "Linen · Brass", price: "$1,240", code: "COU-077", img: p3 },
-  { name: "Carrara Column", collection: "Stone Series", finish: "Carrara · Brass", price: "$2,180", code: "CAR-302", img: p4 },
-];
-
-function whatsappHref(p: typeof PRODUCTS[number]) {
-  const text = `Hello,%0A%0AI'm interested in this lighting piece.%0A%0AProduct: ${encodeURIComponent(p.name)}%0ACode: ${p.code}%0APrice: ${encodeURIComponent(p.price)}%0A%0APlease share more details.`;
-  return `https://wa.me/000000000?text=${text}`;
-}
+import { PRODUCTS, whatsappHref } from "@/lib/lumere-data";
 
 export function BestSellers() {
   const ref = useReveal<HTMLDivElement>();
+  const items = PRODUCTS.slice(0, 4);
   return (
     <section id="bestsellers" className="bg-background py-28 md:py-40">
       <div ref={ref} className="reveal mx-auto max-w-[1600px] px-6 md:px-10 lg:px-14">
@@ -33,7 +19,7 @@ export function BestSellers() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-16">
-          {PRODUCTS.map((p) => (
+          {items.map((p) => (
             <article key={p.code} className="group">
               <div className="relative overflow-hidden bg-bone aspect-[4/5]">
                 <img
