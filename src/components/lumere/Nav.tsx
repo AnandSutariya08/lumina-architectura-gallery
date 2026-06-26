@@ -47,7 +47,7 @@ export function Nav() {
       <div className="mx-auto max-w-[1600px] px-6 md:px-10 lg:px-14">
         <div className="flex h-20 items-center justify-between md:h-24">
           <Link to="/" className="flex items-center gap-3 shrink-0">
-            <img src={logo} alt="House of Lumere" className="h-9 w-auto md:h-11" />
+            <img src={logo} alt="House of Lumere" className="h-16 w-auto md:h-20" />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-10">
