@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/image_1782473633448.png";
 import { CATEGORIES } from "@/lib/lumere-data";
 
 const NAV: { label: string; to: string; hasDropdown?: boolean }[] = [
@@ -47,7 +47,7 @@ export function Nav() {
       <div className="mx-auto max-w-[1600px] px-6 md:px-10 lg:px-14">
         <div className="flex h-28 items-center justify-between md:h-36">
           <Link to="/" className="flex items-center gap-3 shrink-0">
-            <img src={logo} alt="House of Lumere" className="h-24 w-auto md:h-28" />
+            <img src={logo} alt="House of Lumere" className="h-[67px] w-auto md:h-[78px]" />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-10">
