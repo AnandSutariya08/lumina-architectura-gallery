@@ -17,6 +17,7 @@ import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as CollectionsCategoryRouteImport } from './routes/collections.$category'
+import { Route as CollectionsCategoryProductRouteImport } from './routes/collections.$category.$product'
 
 const ProjectsRoute = ProjectsRouteImport.update({
   id: '/projects',
@@ -58,6 +59,12 @@ const CollectionsCategoryRoute = CollectionsCategoryRouteImport.update({
   path: '/$category',
   getParentRoute: () => CollectionsRoute,
 } as any)
+const CollectionsCategoryProductRoute =
+  CollectionsCategoryProductRouteImport.update({
+    id: '/$product',
+    path: '/$product',
+    getParentRoute: () => CollectionsCategoryRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -67,7 +74,8 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/projects': typeof ProjectsRoute
-  '/collections/$category': typeof CollectionsCategoryRoute
+  '/collections/$category': typeof CollectionsCategoryRouteWithChildren
+  '/collections/$category/$product': typeof CollectionsCategoryProductRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -77,7 +85,8 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/projects': typeof ProjectsRoute
-  '/collections/$category': typeof CollectionsCategoryRoute
+  '/collections/$category': typeof CollectionsCategoryRouteWithChildren
+  '/collections/$category/$product': typeof CollectionsCategoryProductRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -88,7 +97,8 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/projects': typeof ProjectsRoute
-  '/collections/$category': typeof CollectionsCategoryRoute
+  '/collections/$category': typeof CollectionsCategoryRouteWithChildren
+  '/collections/$category/$product': typeof CollectionsCategoryProductRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -101,6 +111,7 @@ export interface FileRouteTypes {
     | '/faq'
     | '/projects'
     | '/collections/$category'
+    | '/collections/$category/$product'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -111,6 +122,7 @@ export interface FileRouteTypes {
     | '/faq'
     | '/projects'
     | '/collections/$category'
+    | '/collections/$category/$product'
   id:
     | '__root__'
     | '/'
@@ -121,6 +133,7 @@ export interface FileRouteTypes {
     | '/faq'
     | '/projects'
     | '/collections/$category'
+    | '/collections/$category/$product'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -191,15 +204,33 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CollectionsCategoryRouteImport
       parentRoute: typeof CollectionsRoute
     }
+    '/collections/$category/$product': {
+      id: '/collections/$category/$product'
+      path: '/$product'
+      fullPath: '/collections/$category/$product'
+      preLoaderRoute: typeof CollectionsCategoryProductRouteImport
+      parentRoute: typeof CollectionsCategoryRoute
+    }
   }
 }
 
+interface CollectionsCategoryRouteChildren {
+  CollectionsCategoryProductRoute: typeof CollectionsCategoryProductRoute
+}
+
+const CollectionsCategoryRouteChildren: CollectionsCategoryRouteChildren = {
+  CollectionsCategoryProductRoute: CollectionsCategoryProductRoute,
+}
+
+const CollectionsCategoryRouteWithChildren =
+  CollectionsCategoryRoute._addFileChildren(CollectionsCategoryRouteChildren)
+
 interface CollectionsRouteChildren {
-  CollectionsCategoryRoute: typeof CollectionsCategoryRoute
+  CollectionsCategoryRoute: typeof CollectionsCategoryRouteWithChildren
 }
 
 const CollectionsRouteChildren: CollectionsRouteChildren = {
-  CollectionsCategoryRoute: CollectionsCategoryRoute,
+  CollectionsCategoryRoute: CollectionsCategoryRouteWithChildren,
 }
 
 const CollectionsRouteWithChildren = CollectionsRoute._addFileChildren(

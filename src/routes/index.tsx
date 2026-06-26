@@ -7,14 +7,23 @@ import { About } from "@/components/lumere/About";
 import { Projects } from "@/components/lumere/Projects";
 import { Testimonials } from "@/components/lumere/Testimonials";
 import { Values } from "@/components/lumere/Values";
+import { WhyChooseUs } from "@/components/lumere/WhyChooseUs";
+import { FAQ } from "@/components/lumere/FAQ";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "House of Lumere — Luxury Lighting & Bespoke Chandeliers" },
-      { name: "description", content: "House of Lumere curates exclusive chandeliers, pendant lighting and architectural fixtures for residences, hotels and ateliers worldwide." },
+      {
+        name: "description",
+        content:
+          "House of Lumere curates exclusive chandeliers, pendant lighting and architectural fixtures for residences, hotels and ateliers worldwide.",
+      },
       { property: "og:title", content: "House of Lumere — Luxury Lighting" },
-      { property: "og:description", content: "Curated collections of luxury lighting crafted for timeless interiors." },
+      {
+        property: "og:description",
+        content: "Curated collections of luxury lighting crafted for timeless interiors.",
+      },
     ],
   }),
   component: Index,
@@ -31,6 +40,8 @@ function Index() {
       <Projects />
       <Testimonials />
       <Values />
+      <WhyChooseUs />
+      <FAQ />
     </>
   );
 }

@@ -1,0 +1,878 @@
+# Luxury Lighting Web Application
+## Design Direction
+
+Create an ultra-premium luxury web application for a company that sells exclusive chandeliers, designer lighting, pendant lights, wall lights, floor lamps, table lamps and decorative luxury lighting.
+
+This website should NOT feel like an ecommerce marketplace.
+
+Instead, it should feel like a luxury architecture magazine mixed with an interior design gallery.
+
+Reference inspiration:
+- RH (Restoration Hardware)
+- Apple level minimalism
+- High-end Interior Design Studio
+- Luxury Architecture Portfolio
+- Designer Furniture Catalog
+
+The experience should immediately communicate:
+
+"Timeless Luxury"
+"Architectural Elegance"
+"Premium Craftsmanship"
+"Modern Sophistication"
+
+The entire experience should feel expensive.
+
+---
+
+# Design Language
+
+Minimal.
+
+Massive whitespace.
+
+Perfect typography.
+
+Large editorial imagery.
+
+Oversized product photography.
+
+No unnecessary colors.
+
+No clutter.
+
+No cards with heavy shadows.
+
+No gradients.
+
+No colorful buttons.
+
+Everything should feel calm, elegant and premium.
+
+The website should breathe.
+
+Every section should have generous spacing.
+
+Use slow elegant transitions.
+
+Micro interactions should be subtle.
+
+Hover animations should be smooth.
+
+Parallax scrolling where appropriate.
+
+Fade-up animations while scrolling.
+
+Luxury cinematic feeling.
+
+---
+
+# Color Palette
+
+Primary Background
+#F8F6F2
+
+Secondary Background
+#F2EEE8
+
+Pure White
+#FFFFFF
+
+Text
+#2D2B28
+
+Secondary Text
+#77736E
+
+Luxury Accent
+Warm Brass
+#B08D57
+
+Dark Accent
+#1F1F1F
+
+Borders
+#E5E1DB
+
+Buttons should mostly be:
+
+White
+Black
+Transparent
+
+Never use bright colors.
+
+---
+
+# Typography
+
+Use elegant editorial typography.
+
+Heading Font
+
+Cormorant Garamond
+
+or
+
+Canela (if available)
+
+or
+
+Bodoni Moda
+
+or
+
+Ivy Mode
+
+Body Font
+
+Inter
+
+or
+
+Manrope
+
+or
+
+Neue Haas Grotesk
+
+Typography Rules
+
+Very large headings
+
+70-110px desktop
+
+Wide letter spacing
+
+Uppercase category titles
+
+Thin elegant body text
+
+Large line heights
+
+Magazine style composition
+
+---
+
+# Navigation
+
+Sticky transparent navbar.
+
+On scroll:
+
+Background becomes solid white.
+
+Minimal shadow.
+
+Logo on left.
+
+Navigation centered.
+
+Inquiry button on right.
+
+Navigation Items
+
+Home
+
+Collections
+
+Luxury Chandeliers
+
+Pendant Lights
+
+Wall Lights
+
+Ceiling Lights
+
+Decor Lighting
+
+Projects
+
+About
+
+Contact
+
+Search Icon
+
+WhatsApp Inquiry Button
+
+No cart.
+
+No checkout.
+
+No account.
+
+No wishlist.
+
+---
+
+# Hero Section
+
+Full screen.
+
+Luxury architectural interior.
+
+Massive premium chandelier.
+
+Soft warm lighting.
+
+Very little text.
+
+Heading
+
+Illuminate Extraordinary Spaces
+
+Subheading
+
+Curated collections of luxury lighting crafted for timeless interiors.
+
+Buttons
+
+Explore Collection
+
+Book Consultation
+
+Small text underneath
+
+Premium Lighting Since XXXX
+
+Luxury Residential & Commercial Projects
+
+Smooth cinematic scroll indicator.
+
+---
+
+# Section 2
+
+Featured Collections
+
+Large editorial layout.
+
+Every collection displayed with oversized imagery.
+
+Collections
+
+Luxury Chandeliers
+
+Pendant Lighting
+
+Wall Sconces
+
+Floor Lamps
+
+Table Lamps
+
+Outdoor Luxury Lighting
+
+Decorative Lighting
+
+Hover effect
+
+Slow zoom image
+
+Luxury fade overlay
+
+Elegant arrow animation
+
+---
+
+# Section 3
+
+Signature Collections
+
+Alternating left-right layout.
+
+Huge image.
+
+Minimal text.
+
+Example
+
+Luxury Crystal Collection
+
+Handcrafted brilliance inspired by timeless European architecture.
+
+Explore Collection →
+
+Repeat for multiple collections.
+
+---
+
+# Section 4
+
+Best Sellers
+
+Large luxury product grid.
+
+4 Columns Desktop
+
+2 Tablet
+
+1 Mobile
+
+Each Product Card
+
+Large Image
+
+Product Name
+
+Collection
+
+Finish
+
+Price
+
+Inquiry Button
+
+NO BUY NOW
+
+NO ADD TO CART
+
+Clicking Inquiry opens WhatsApp with
+
+Product Name
+
+Product Code
+
+Product URL
+
+Price
+
+Automatically filled.
+
+Example Message
+
+Hello,
+I'm interested in this lighting product.
+
+Product:
+Price:
+
+Please share more details.
+
+---
+
+# Product Page
+
+Luxury Gallery
+
+Large photography
+
+Zoom
+
+Fullscreen gallery
+
+Product Name
+
+Designer Collection
+
+Price
+
+Description
+
+Specifications
+
+Dimensions
+
+Materials
+
+Finish Options
+
+Bulb Details
+
+Installation Guide
+
+Related Products
+
+Sticky Inquiry Button
+
+WhatsApp Inquiry
+
+---
+
+# About Section
+
+Editorial layout.
+
+Large architectural photography.
+
+Storytelling.
+
+Craftsmanship.
+
+Luxury.
+
+Heritage.
+
+Premium materials.
+
+Attention to detail.
+
+---
+
+# Projects Section
+
+Luxury residential projects.
+
+Hotels.
+
+Villas.
+
+Penthouses.
+
+Restaurants.
+
+Corporate Offices.
+
+Masonry gallery.
+
+Large images.
+
+Hover animations.
+
+---
+
+# Testimonials
+
+Editorial.
+
+Minimal.
+
+No cards.
+
+Large quotation marks.
+
+Elegant typography.
+
+Customer name
+
+Project Type
+
+---
+
+# Brand Values
+
+Four columns
+
+Premium Quality
+
+Architectural Design
+
+Worldwide Inspiration
+
+Timeless Craftsmanship
+
+Minimal line icons.
+
+---
+
+# Why Choose Us
+
+Luxury finishes
+
+Custom lighting
+
+Exclusive collections
+
+Professional consultation
+
+Architect support
+
+Installation guidance
+
+After-sales support
+
+---
+
+# FAQ
+
+Elegant accordion.
+
+Minimal borders.
+
+Smooth animations.
+
+---
+
+# Contact Section
+
+Luxury split layout.
+
+Left
+
+Large interior photograph.
+
+Right
+
+Inquiry Form
+
+Name
+
+Phone
+
+Email
+
+City
+
+Project Type
+
+Message
+
+Submit
+
+OR
+
+Direct WhatsApp Inquiry
+
+---
+
+# Footer
+
+Editorial style.
+
+Large logo.
+
+Minimal links.
+
+Collections
+
+Company
+
+Projects
+
+Privacy
+
+Terms
+
+Contact
+
+Instagram
+
+Pinterest
+
+LinkedIn
+
+WhatsApp
+
+Newsletter
+
+---
+
+# Product Categories
+
+Luxury Chandeliers
+
+Modern Chandeliers
+
+Crystal Chandeliers
+
+Contemporary Lighting
+
+Pendant Lights
+
+Wall Sconces
+
+Ceiling Lights
+
+Floor Lamps
+
+Table Lamps
+
+Luxury Decorative Lights
+
+Outdoor Lighting
+
+Designer Collections
+
+New Arrivals
+
+Featured Products
+
+Limited Collection
+
+---
+
+# Admin Panel
+
+Fully Dynamic CMS
+
+Dashboard
+
+Products
+
+Categories
+
+Collections
+
+Brands
+
+Finishes
+
+Materials
+
+Dimensions
+
+Bulb Types
+
+Projects
+
+Testimonials
+
+Blogs
+
+Gallery
+
+Homepage Sections
+
+Hero Slides
+
+Navigation
+
+Offers
+
+SEO
+
+Users
+
+Roles
+
+WhatsApp Settings
+
+Site Settings
+
+Media Library
+
+Inquiry Management
+
+Analytics
+
+Lead Tracking
+
+Export CSV
+
+---
+
+# Product Features
+
+Unlimited Images
+
+360 Gallery
+
+Multiple Variants
+
+Finish Options
+
+Multiple Prices
+
+Specifications
+
+Downloads
+
+Product PDF
+
+Videos
+
+Stock Status
+
+Featured Badge
+
+New Badge
+
+Luxury Collection Badge
+
+Related Products
+
+SEO
+
+Slug
+
+Meta Title
+
+Meta Description
+
+Open Graph
+
+Structured Data
+
+Alt Tags
+
+Schema
+
+Canonical URL
+
+---
+
+# Inquiry System
+
+Instead of Add to Cart
+
+Every product has
+
+"Inquire Now"
+
+Click →
+
+Open WhatsApp
+
+Auto-filled Message
+
+Include
+
+Product Name
+
+SKU
+
+Collection
+
+Price
+
+Website URL
+
+Customer Name
+
+Phone (optional)
+
+Project Requirement
+
+---
+
+# Blog
+
+Luxury Interior Trends
+
+Lighting Guides
+
+Architecture Inspiration
+
+Designer Interviews
+
+Installation Tips
+
+Project Stories
+
+SEO optimized.
+
+---
+
+# SEO
+
+Extremely high-end SEO implementation.
+
+Schema.org
+
+Breadcrumb
+
+OpenGraph
+
+Twitter Cards
+
+Dynamic Metadata
+
+Image Optimization
+
+Lazy Loading
+
+Next Image
+
+SSR
+
+Static Generation
+
+Sitemap
+
+Robots
+
+Canonical URLs
+
+Core Web Vitals
+
+JSON-LD
+
+FAQ Schema
+
+Product Schema
+
+Organization Schema
+
+Local Business Schema
+
+Article Schema
+
+---
+
+# Performance
+
+Next.js
+
+App Router
+
+TypeScript
+
+TailwindCSS
+
+Framer Motion
+
+Lenis Smooth Scroll
+
+GSAP (subtle)
+
+Responsive
+
+Image Optimization
+
+Code Splitting
+
+Server Components
+
+Accessibility
+
+WCAG AA
+
+Keyboard Navigation
+
+Screen Reader Support
+
+---
+
+# Luxury UI Details
+
+Rounded corners should be minimal.
+
+Thin borders.
+
+Soft hover transitions.
+
+Elegant image scaling.
+
+Luxury loading animation.
+
+Image fade.
+
+Scroll reveal.
+
+Magazine spacing.
+
+Oversized photography.
+
+Editorial composition.
+
+Muted luxury colors.
+
+No loud UI.
+
+No flashy animations.
+
+Everything should feel handcrafted, timeless and architectural.
+
+The visitor should feel like they are walking through a luxury lighting gallery rather than browsing an online store.
+
+The overall emotional experience should communicate:
+- Quiet confidence
+- Exclusivity
+- Sophisticated craftsmanship
+- Architectural beauty
+- Premium interior design
+- Timeless elegance
+- Bespoke luxury
+
+The final result should rival the visual quality of world-class luxury brands while remaining unique, avoiding direct imitation of any specific website.
