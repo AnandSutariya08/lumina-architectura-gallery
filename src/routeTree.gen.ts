@@ -17,6 +17,7 @@ import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as CollectionsIndexRouteImport } from './routes/collections.index'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as ProjectsSlugRouteImport } from './routes/projects.$slug'
 import { Route as CollectionsCategoryRouteImport } from './routes/collections.$category'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
@@ -63,6 +64,11 @@ const CollectionsIndexRoute = CollectionsIndexRouteImport.update({
   path: '/',
   getParentRoute: () => CollectionsRoute,
 } as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => BlogRoute,
+} as any)
 const ProjectsSlugRoute = ProjectsSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -102,6 +108,7 @@ export interface FileRoutesByFullPath {
   '/blog/$slug': typeof BlogSlugRoute
   '/collections/$category': typeof CollectionsCategoryRouteWithChildren
   '/projects/$slug': typeof ProjectsSlugRoute
+  '/blog/': typeof BlogIndexRoute
   '/collections/': typeof CollectionsIndexRoute
   '/collections/$category/$product': typeof CollectionsCategoryProductRoute
   '/collections/$category/': typeof CollectionsCategoryIndexRoute
@@ -109,12 +116,12 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/projects': typeof ProjectsRouteWithChildren
   '/blog/$slug': typeof BlogSlugRoute
   '/projects/$slug': typeof ProjectsSlugRoute
+  '/blog': typeof BlogIndexRoute
   '/collections': typeof CollectionsIndexRoute
   '/collections/$category/$product': typeof CollectionsCategoryProductRoute
   '/collections/$category': typeof CollectionsCategoryIndexRoute
@@ -131,6 +138,7 @@ export interface FileRoutesById {
   '/blog/$slug': typeof BlogSlugRoute
   '/collections/$category': typeof CollectionsCategoryRouteWithChildren
   '/projects/$slug': typeof ProjectsSlugRoute
+  '/blog/': typeof BlogIndexRoute
   '/collections/': typeof CollectionsIndexRoute
   '/collections/$category/$product': typeof CollectionsCategoryProductRoute
   '/collections/$category/': typeof CollectionsCategoryIndexRoute
@@ -148,6 +156,7 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/collections/$category'
     | '/projects/$slug'
+    | '/blog/'
     | '/collections/'
     | '/collections/$category/$product'
     | '/collections/$category/'
@@ -155,12 +164,12 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
-    | '/blog'
     | '/contact'
     | '/faq'
     | '/projects'
     | '/blog/$slug'
     | '/projects/$slug'
+    | '/blog'
     | '/collections'
     | '/collections/$category/$product'
     | '/collections/$category'
@@ -176,6 +185,7 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/collections/$category'
     | '/projects/$slug'
+    | '/blog/'
     | '/collections/'
     | '/collections/$category/$product'
     | '/collections/$category/'
@@ -249,6 +259,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CollectionsIndexRouteImport
       parentRoute: typeof CollectionsRoute
     }
+    '/blog/': {
+      id: '/blog/'
+      path: '/'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof BlogRoute
+    }
     '/projects/$slug': {
       id: '/projects/$slug'
       path: '/$slug'
@@ -289,10 +306,12 @@ declare module '@tanstack/react-router' {
 
 interface BlogRouteChildren {
   BlogSlugRoute: typeof BlogSlugRoute
+  BlogIndexRoute: typeof BlogIndexRoute
 }
 
 const BlogRouteChildren: BlogRouteChildren = {
   BlogSlugRoute: BlogSlugRoute,
+  BlogIndexRoute: BlogIndexRoute,
 }
 
 const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
