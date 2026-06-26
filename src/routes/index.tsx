@@ -10,6 +10,7 @@ import {
   HomeTestimonials,
   HomeEditorialStrip,
   HomeProcess,
+  HomeGallery,
   HomeCommissionCTA,
 } from "@/components/lumere/HomeSections";
 
@@ -45,6 +46,7 @@ function Index() {
       <HomeTestimonials />
       <HomeEditorialStrip />
       <HomeProcess />
+      <HomeGallery />
       <HomeCommissionCTA />
     </>
   );

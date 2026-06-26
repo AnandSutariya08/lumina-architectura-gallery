@@ -8,6 +8,14 @@ import modern from "@/assets/signature-modern.jpg";
 import aboutImg from "@/assets/about.jpg";
 import p1 from "@/assets/product-1.jpg";
 import p2 from "@/assets/product-2.jpg";
+import g1 from "@/assets/gallery-1.jpg";
+import g2 from "@/assets/gallery-2.jpg";
+import g3 from "@/assets/gallery-3.jpg";
+import g4 from "@/assets/gallery-4.jpg";
+import g5 from "@/assets/gallery-5.jpg";
+import g6 from "@/assets/gallery-6.jpg";
+import g7 from "@/assets/gallery-7.jpg";
+import g8 from "@/assets/gallery-8.jpg";
 import p3 from "@/assets/product-3.jpg";
 import p4 from "@/assets/product-4.jpg";
 import proj1 from "@/assets/project-1.jpg";
@@ -670,6 +678,71 @@ function StepCard({ step: s, index }: { step: typeof STEPS[number]; index: numbe
         <h3 className="font-medium text-base mb-4">{s.title}</h3>
         <p className="text-sm text-muted-foreground leading-relaxed">{s.body}</p>
       </div>
+    </div>
+  );
+}
+
+/* ─────────────────────────────────────────────
+   12. GALLERY
+───────────────────────────────────────────── */
+const GALLERY = [
+  { src: g1, alt: "Crystal burst chandelier" },
+  { src: g2, alt: "Butterfly wing installation" },
+  { src: g3, alt: "Gold crystal close-up" },
+  { src: g4, alt: "Copper tulip pendants" },
+  { src: g5, alt: "Glass feather sculpture" },
+  { src: g6, alt: "Flame glass chandelier" },
+  { src: g7, alt: "Blue glass wave fixture" },
+  { src: g8, alt: "Crystal spike installation" },
+];
+
+export function HomeGallery() {
+  const headingRef = useReveal<HTMLDivElement>();
+  return (
+    <section className="bg-[#0a0a0a] py-24 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div ref={headingRef} className="reveal text-center mb-16">
+          <p className="text-[10px] tracking-[0.45em] text-white/35 uppercase mb-3">
+            Our Work
+          </p>
+          <h2
+            className="text-5xl md:text-6xl font-light text-white leading-none"
+            style={{ fontFamily: "Cormorant Garamond, serif" }}
+          >
+            Gallery
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+          {GALLERY.map((item, i) => (
+            <GalleryCell key={i} item={item} index={i} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function GalleryCell({
+  item,
+  index,
+}: {
+  item: { src: string; alt: string };
+  index: number;
+}) {
+  const ref = useReveal<HTMLDivElement>();
+  return (
+    <div
+      ref={ref}
+      className="reveal aspect-square overflow-hidden group"
+      style={{ transitionDelay: `${index * 60}ms` }}
+    >
+      <img
+        src={item.src}
+        alt={item.alt}
+        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+        style={{ transform: "rotate(-45deg) scale(1.44)" }}
+      />
     </div>
   );
 }
