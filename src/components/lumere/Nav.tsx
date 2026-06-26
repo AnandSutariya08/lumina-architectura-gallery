@@ -45,7 +45,7 @@ export function Nav() {
       ].join(" ")}
     >
       <div className="mx-auto max-w-[1600px] px-6 md:px-10 lg:px-14">
-        <div className="flex h-28 items-center justify-between md:h-36">
+        <div className="flex h-16 items-center justify-between md:h-20">
           <Link to="/" className="flex items-center gap-3 shrink-0">
             <img src={logo} alt="House of Lumere" className="h-[47px] w-auto md:h-[55px]" />
           </Link>
