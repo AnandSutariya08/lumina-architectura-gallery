@@ -16,7 +16,9 @@ import { Route as CollectionsRouteImport } from './routes/collections'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ProjectsSlugRouteImport } from './routes/projects.$slug'
 import { Route as CollectionsCategoryRouteImport } from './routes/collections.$category'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as CollectionsCategoryProductRouteImport } from './routes/collections.$category.$product'
 
 const ProjectsRoute = ProjectsRouteImport.update({
@@ -54,10 +56,20 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProjectsSlugRoute = ProjectsSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => ProjectsRoute,
+} as any)
 const CollectionsCategoryRoute = CollectionsCategoryRouteImport.update({
   id: '/$category',
   path: '/$category',
   getParentRoute: () => CollectionsRoute,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => BlogRoute,
 } as any)
 const CollectionsCategoryProductRoute =
   CollectionsCategoryProductRouteImport.update({
@@ -69,35 +81,41 @@ const CollectionsCategoryProductRoute =
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/blog': typeof BlogRoute
+  '/blog': typeof BlogRouteWithChildren
   '/collections': typeof CollectionsRouteWithChildren
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
-  '/projects': typeof ProjectsRoute
+  '/projects': typeof ProjectsRouteWithChildren
+  '/blog/$slug': typeof BlogSlugRoute
   '/collections/$category': typeof CollectionsCategoryRouteWithChildren
+  '/projects/$slug': typeof ProjectsSlugRoute
   '/collections/$category/$product': typeof CollectionsCategoryProductRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/blog': typeof BlogRoute
+  '/blog': typeof BlogRouteWithChildren
   '/collections': typeof CollectionsRouteWithChildren
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
-  '/projects': typeof ProjectsRoute
+  '/projects': typeof ProjectsRouteWithChildren
+  '/blog/$slug': typeof BlogSlugRoute
   '/collections/$category': typeof CollectionsCategoryRouteWithChildren
+  '/projects/$slug': typeof ProjectsSlugRoute
   '/collections/$category/$product': typeof CollectionsCategoryProductRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/blog': typeof BlogRoute
+  '/blog': typeof BlogRouteWithChildren
   '/collections': typeof CollectionsRouteWithChildren
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
-  '/projects': typeof ProjectsRoute
+  '/projects': typeof ProjectsRouteWithChildren
+  '/blog/$slug': typeof BlogSlugRoute
   '/collections/$category': typeof CollectionsCategoryRouteWithChildren
+  '/projects/$slug': typeof ProjectsSlugRoute
   '/collections/$category/$product': typeof CollectionsCategoryProductRoute
 }
 export interface FileRouteTypes {
@@ -110,7 +128,9 @@ export interface FileRouteTypes {
     | '/contact'
     | '/faq'
     | '/projects'
+    | '/blog/$slug'
     | '/collections/$category'
+    | '/projects/$slug'
     | '/collections/$category/$product'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -121,7 +141,9 @@ export interface FileRouteTypes {
     | '/contact'
     | '/faq'
     | '/projects'
+    | '/blog/$slug'
     | '/collections/$category'
+    | '/projects/$slug'
     | '/collections/$category/$product'
   id:
     | '__root__'
@@ -132,18 +154,20 @@ export interface FileRouteTypes {
     | '/contact'
     | '/faq'
     | '/projects'
+    | '/blog/$slug'
     | '/collections/$category'
+    | '/projects/$slug'
     | '/collections/$category/$product'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
-  BlogRoute: typeof BlogRoute
+  BlogRoute: typeof BlogRouteWithChildren
   CollectionsRoute: typeof CollectionsRouteWithChildren
   ContactRoute: typeof ContactRoute
   FaqRoute: typeof FaqRoute
-  ProjectsRoute: typeof ProjectsRoute
+  ProjectsRoute: typeof ProjectsRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
@@ -197,12 +221,26 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/projects/$slug': {
+      id: '/projects/$slug'
+      path: '/$slug'
+      fullPath: '/projects/$slug'
+      preLoaderRoute: typeof ProjectsSlugRouteImport
+      parentRoute: typeof ProjectsRoute
+    }
     '/collections/$category': {
       id: '/collections/$category'
       path: '/$category'
       fullPath: '/collections/$category'
       preLoaderRoute: typeof CollectionsCategoryRouteImport
       parentRoute: typeof CollectionsRoute
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof BlogRoute
     }
     '/collections/$category/$product': {
       id: '/collections/$category/$product'
@@ -213,6 +251,16 @@ declare module '@tanstack/react-router' {
     }
   }
 }
+
+interface BlogRouteChildren {
+  BlogSlugRoute: typeof BlogSlugRoute
+}
+
+const BlogRouteChildren: BlogRouteChildren = {
+  BlogSlugRoute: BlogSlugRoute,
+}
+
+const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
 
 interface CollectionsCategoryRouteChildren {
   CollectionsCategoryProductRoute: typeof CollectionsCategoryProductRoute
@@ -237,14 +285,26 @@ const CollectionsRouteWithChildren = CollectionsRoute._addFileChildren(
   CollectionsRouteChildren,
 )
 
+interface ProjectsRouteChildren {
+  ProjectsSlugRoute: typeof ProjectsSlugRoute
+}
+
+const ProjectsRouteChildren: ProjectsRouteChildren = {
+  ProjectsSlugRoute: ProjectsSlugRoute,
+}
+
+const ProjectsRouteWithChildren = ProjectsRoute._addFileChildren(
+  ProjectsRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
-  BlogRoute: BlogRoute,
+  BlogRoute: BlogRouteWithChildren,
   CollectionsRoute: CollectionsRouteWithChildren,
   ContactRoute: ContactRoute,
   FaqRoute: FaqRoute,
-  ProjectsRoute: ProjectsRoute,
+  ProjectsRoute: ProjectsRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

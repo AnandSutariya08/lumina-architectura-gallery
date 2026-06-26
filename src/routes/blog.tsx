@@ -40,7 +40,7 @@ function BlogPage() {
 
       <section className="bg-background py-24 md:py-32">
         <div ref={ref} className="reveal mx-auto max-w-[1600px] px-6 md:px-10 lg:px-14">
-          <Link to="/blog" className="group block mb-24 md:mb-32 grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-center">
+          <Link to="/blog/$slug" params={{ slug: feature.slug }} className="group block mb-24 md:mb-32 grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-center">
             <div className="md:col-span-8 overflow-hidden bg-bone aspect-[16/10]">
               <img src={feature.img} alt={feature.title} loading="lazy" className="h-full w-full object-cover transition-transform duration-[1500ms] ease-out group-hover:scale-[1.03]" />
             </div>
@@ -54,7 +54,7 @@ function BlogPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
             {rest.map((p) => (
-              <Link key={p.slug} to="/blog" className="group block">
+              <Link key={p.slug} to="/blog/$slug" params={{ slug: p.slug }} className="group block">
                 <div className="overflow-hidden bg-bone aspect-[4/5]">
                   <img src={p.img} alt={p.title} loading="lazy" className="h-full w-full object-cover transition-transform duration-[1500ms] ease-out group-hover:scale-[1.03]" />
                 </div>
