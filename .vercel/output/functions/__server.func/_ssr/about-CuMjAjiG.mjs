@@ -1,0 +1,242 @@
+import { t as about_default } from "./about-DcnOvHKg.mjs";
+import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
+import { t as useReveal } from "./use-reveal-Cazrll_v.mjs";
+import { t as PageHero } from "./PageHero-FPKD9s-6.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/about-CuMjAjiG.js
+var import_jsx_runtime = require_jsx_runtime();
+function About() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+		id: "about",
+		className: "bg-background py-28 md:py-40",
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			ref: useReveal(),
+			className: "reveal mx-auto max-w-[1600px] px-6 md:px-10 lg:px-14 grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-20 items-center",
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				className: "md:col-span-5",
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "overflow-hidden aspect-[4/5]",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+						src: about_default,
+						alt: "A craftsman finishing a brass pendant in the Lumere atelier",
+						loading: "lazy",
+						width: 1400,
+						height: 1750,
+						className: "h-full w-full object-cover"
+					})
+				})
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "md:col-span-6 md:col-start-7",
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: "eyebrow mb-6",
+						children: "The House"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
+						className: "font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.04] mb-10",
+						children: ["A house devoted to ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("em", {
+							className: "not-italic text-muted-foreground",
+							children: "light, material and silence."
+						})]
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "space-y-6 text-muted-foreground text-base md:text-lg leading-relaxed max-w-xl",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "House of Lumere was founded on a quiet idea — that light is the first piece of furniture in any great room. We work alongside architects, interior designers and private clients to specify lighting that elevates an interior without raising its voice." }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "Every fixture is built to order in solid brass, hand-blown glass and hand-cut crystal, finished by artisans whose families have shaped metal for four generations." })]
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "mt-14 grid grid-cols-3 gap-8 border-t border-border pt-10",
+						children: [
+							["10+", "Years of practice"],
+							["220", "Realised projects"],
+							["38", "Countries served"]
+						].map(([n, l]) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "font-serif text-4xl md:text-5xl",
+							children: n
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "eyebrow mt-3",
+							children: l
+						})] }, l))
+					})
+				]
+			})]
+		})
+	});
+}
+var VALUES = [
+	{
+		n: "01",
+		t: "Premium Quality",
+		d: "Solid brass, hand-cut crystal, mouth-blown glass. Nothing else."
+	},
+	{
+		n: "02",
+		t: "Architectural Design",
+		d: "Drawn alongside architects, scaled to room and ceiling."
+	},
+	{
+		n: "03",
+		t: "Worldwide Sourcing",
+		d: "Studios in Murano, Paris, Jaipur and Kyoto. Shipped globally."
+	},
+	{
+		n: "04",
+		t: "Timeless Craft",
+		d: "Made to outlast trends — and the houses that hold them."
+	}
+];
+function Values() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+		className: "bg-bone py-24 md:py-32 border-y border-border",
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			ref: useReveal(),
+			className: "reveal mx-auto max-w-[1600px] px-6 md:px-10 lg:px-14 grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-16",
+			children: VALUES.map((v) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "font-serif text-3xl text-brass mb-6",
+					children: v.n
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "hairline mb-6" }),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+					className: "font-serif text-2xl mb-4",
+					children: v.t
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+					className: "text-muted-foreground text-sm leading-relaxed",
+					children: v.d
+				})
+			] }, v.n))
+		})
+	});
+}
+var QUOTES = [
+	{
+		q: "Lumere understood the room before we did. The light feels inevitable — as if it had always been there.",
+		name: "Élise Marchand",
+		role: "Marchand Studio · Paris"
+	},
+	{
+		q: "A rare house. Quiet, exacting, and entirely without pretence. We specify them on every villa now.",
+		name: "Raj Mehta",
+		role: "Atelier Mehta · Mumbai"
+	},
+	{
+		q: "The Aurelia Empire above our stair is the first thing every guest remarks upon. It is architecture, not decoration.",
+		name: "Sophia Reinhardt",
+		role: "Private Client · Zürich"
+	}
+];
+function Testimonials() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+		className: "bg-background py-28 md:py-40 border-t border-border",
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			ref: useReveal(),
+			className: "reveal mx-auto max-w-[1400px] px-6 md:px-10 lg:px-14",
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+				className: "eyebrow text-center mb-20 md:mb-28",
+				children: "In conversation"
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				className: "grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-12",
+				children: QUOTES.map((t) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("figure", {
+					className: "relative",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							"aria-hidden": true,
+							className: "absolute -top-8 -left-2 font-serif text-[120px] leading-none text-border select-none",
+							children: "\""
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("blockquote", {
+							className: "relative font-serif text-xl md:text-2xl leading-[1.4] text-foreground",
+							children: t.q
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("figcaption", {
+							className: "mt-10 pt-8 border-t border-border",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "text-sm font-medium",
+								children: t.name
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "eyebrow mt-2",
+								children: t.role
+							})]
+						})
+					]
+				}, t.name))
+			})]
+		})
+	});
+}
+var WHY = [
+	{
+		t: "Luxury finishes",
+		d: "Solid brass, hand-cut crystal, mouth-blown glass, alabaster and stone."
+	},
+	{
+		t: "Custom lighting",
+		d: "Drawn to your ceiling, your stair, your room — never to a catalogue."
+	},
+	{
+		t: "Exclusive collections",
+		d: "Limited editions and atelier-only pieces, never resold."
+	},
+	{
+		t: "Professional consultation",
+		d: "Specification, drawings and finish samples for trade clients."
+	},
+	{
+		t: "Architect support",
+		d: "Technical files, IES data, CAD blocks and on-site visits."
+	},
+	{
+		t: "After-sales",
+		d: "Lifetime servicing — re-electrification, re-finishing, replacement crystal."
+	}
+];
+function AboutPage() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
+		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(PageHero, {
+			eyebrow: "The House",
+			title: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: ["House of Lumere — ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("em", {
+				className: "not-italic text-muted-foreground",
+				children: "a quiet practice of light."
+			})] }),
+			intro: "Founded in 2014, House of Lumere is a small house dedicated to architectural lighting — drawn for residences, hotels and ateliers across thirty-eight countries."
+		}),
+		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(About, {}),
+		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+			className: "bg-background py-24 md:py-32 border-t border-border",
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "mx-auto max-w-[1400px] px-6 md:px-10 lg:px-14",
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: "eyebrow mb-6",
+						children: "Why House of Lumere"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+						className: "font-serif text-4xl md:text-5xl lg:text-6xl mb-16 max-w-3xl",
+						children: "Specified by people who know light."
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16",
+						children: WHY.map((w, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "font-serif text-3xl text-brass mb-5",
+								children: String(i + 1).padStart(2, "0")
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "hairline mb-5" }),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+								className: "font-serif text-2xl mb-3",
+								children: w.t
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "text-muted-foreground text-sm leading-relaxed max-w-sm",
+								children: w.d
+							})
+						] }, w.t))
+					})
+				]
+			})
+		}),
+		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Values, {}),
+		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Testimonials, {})
+	] });
+}
+//#endregion
+export { AboutPage as component };
