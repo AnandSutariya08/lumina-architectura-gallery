@@ -39,7 +39,7 @@ export function Footer() {
       <div className="mx-auto max-w-[1600px] px-6 md:px-10 lg:px-14">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 pb-20 border-b border-white/15">
           <div className="md:col-span-4">
-            <img src={logo} alt="House of Lumere" className="h-12 w-auto invert brightness-0 mix-blend-difference opacity-90" />
+            <img src={logo} alt="House of Lumere" className="h-36 w-auto invert opacity-90" />
             <p className="mt-10 max-w-sm text-white/65 text-sm leading-relaxed">
               House of Lumere — exclusive lighting and architectural fixtures,
               hand-assembled for residences, hotels and ateliers worldwide.
