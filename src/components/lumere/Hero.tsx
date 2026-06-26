@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import hero from "@/assets/hero.jpg";
 
 export function Hero() {
@@ -25,19 +26,19 @@ export function Hero() {
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-4">
-            <a
-              href="#collections"
+            <Link
+              to="/collections"
               className="inline-flex items-center gap-4 bg-white px-7 py-4 text-[11px] uppercase tracking-[0.28em] text-foreground hover:bg-white/90 transition-colors duration-500"
             >
               Explore Collection
               <span aria-hidden>→</span>
-            </a>
-            <a
-              href="#contact"
+            </Link>
+            <Link
+              to="/contact"
               className="inline-flex items-center gap-4 border border-white/70 px-7 py-4 text-[11px] uppercase tracking-[0.28em] text-white hover:bg-white hover:text-foreground transition-colors duration-500"
             >
               Book Consultation
-            </a>
+            </Link>
           </div>
         </div>
 

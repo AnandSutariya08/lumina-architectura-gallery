@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { useReveal } from "@/hooks/use-reveal";
 import p1 from "@/assets/project-1.jpg";
 import p2 from "@/assets/project-2.jpg";
@@ -29,7 +30,7 @@ export function Projects() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {PROJECTS.map((p, i) => (
-            <a key={p.title} href="#contact" className={`group block ${i % 2 === 1 ? "md:mt-20" : ""}`}>
+            <Link key={p.title} to="/projects" className={`group block ${i % 2 === 1 ? "md:mt-20" : ""}`}>
               <div className={`overflow-hidden bg-background ${p.tall ? "aspect-[4/5]" : "aspect-[4/3]"}`}>
                 <img src={p.img} alt={p.title} loading="lazy" width={1400} height={1750}
                   className="h-full w-full object-cover transition-transform duration-[1800ms] ease-out group-hover:scale-[1.04]" />
@@ -38,7 +39,7 @@ export function Projects() {
                 <h3 className="font-serif text-2xl md:text-3xl">{p.title}</h3>
                 <p className="eyebrow">{p.type}</p>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>
