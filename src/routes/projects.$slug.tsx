@@ -279,7 +279,7 @@ function ProjectDetailPage() {
                   ← All Projects
                 </Link>
                 <a
-                  href="https://wa.me/000000000?text=Hello%2C%20I%20saw%20your%20project%20work%20and%20would%20like%20to%20discuss%20a%20commission."
+                  href="https://wa.me/919377555555?text=Hello%20House%20of%20Lumere%2C%20I%20saw%20your%20project%20work%20and%20would%20like%20to%20discuss%20a%20commission."
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center gap-3 bg-foreground text-background px-8 py-4 text-[11px] uppercase tracking-[0.28em] hover:bg-foreground/90 transition-colors"

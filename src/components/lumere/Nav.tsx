@@ -149,7 +149,7 @@ export function Nav() {
             </button>
 
             <a
-              href="https://wa.me/000000000?text=Hello%20House%20of%20Lumere"
+              href="https://wa.me/919377555555?text=Hello%20House%20of%20Lumere%2C%20I%20would%20like%20to%20make%20an%20enquiry."
               target="_blank"
               rel="noreferrer"
               className={[
@@ -223,7 +223,7 @@ export function Nav() {
             ))}
             <div className="pt-6 border-t border-border">
               <a
-                href="https://wa.me/000000000?text=Hello%20House%20of%20Lumere"
+                href="https://wa.me/919377555555?text=Hello%20House%20of%20Lumere%2C%20I%20would%20like%20to%20make%20an%20enquiry."
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-3 bg-foreground text-background px-6 py-3.5 text-[11px] uppercase tracking-[0.28em]"

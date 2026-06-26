@@ -15,9 +15,7 @@ export const Route = createFileRoute("/contact")({
 });
 
 const SHOWROOMS = [
-  { city: "Paris", address: "12 rue de Sèvres, 75006", tel: "+33 1 00 00 00 00" },
-  { city: "New York", address: "211 Greene Street, SoHo", tel: "+1 212 000 0000" },
-  { city: "Mumbai", address: "Kala Ghoda, Fort", tel: "+91 22 0000 0000" },
+  { city: "Surat", address: "Surat, Gujarat, India", tel: "+91 93775 55555" },
 ];
 
 function ContactPage() {

@@ -250,7 +250,7 @@ function BlogIndexPage() {
                 or a project we've just completed. No promotions. No product announcements.
               </p>
               <a
-                href="https://wa.me/000000000?text=Please%20add%20me%20to%20the%20Lumere%20Journal%20mailing%20list."
+                href="https://wa.me/919377555555?text=Please%20add%20me%20to%20the%20House%20of%20Lumere%20Journal%20mailing%20list."
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-3 border border-background/40 text-background px-8 py-4 text-[11px] uppercase tracking-[0.28em] hover:bg-background hover:text-foreground transition-colors duration-500"

@@ -610,15 +610,16 @@ export const PRODUCTS: Product[] = [
 ];
 
 export function whatsappHref(
-  p: Pick<Product, "name" | "code" | "price">,
+  p: Pick<Product, "name" | "code" | "price" | "img">,
   origin = "",
 ) {
   const text =
-    `Hello,%0A%0AI'm interested in this lighting piece.%0A%0A` +
-    `Product: ${encodeURIComponent(p.name)}%0A` +
-    `Code: ${p.code}%0A` +
-    `Price: ${encodeURIComponent(p.price)}` +
-    (origin ? `%0AURL: ${encodeURIComponent(origin)}` : "") +
-    `%0A%0APlease share more details.`;
-  return `https://wa.me/000000000?text=${text}`;
+    `Hello House of Lumere,%0A%0AI am interested in the following piece and would love to know more:%0A%0A` +
+    `*Product:* ${encodeURIComponent(p.name)}%0A` +
+    `*Code:* ${p.code}%0A` +
+    `*Price:* ${encodeURIComponent(p.price)}` +
+    (origin ? `%0A*Page:* ${encodeURIComponent(origin)}` : "") +
+    (p.img ? `%0A*Image:* ${encodeURIComponent(p.img)}` : "") +
+    `%0A%0AKindly share availability, finish options, and lead time. Thank you.`;
+  return `https://wa.me/919377555555?text=${text}`;
 }

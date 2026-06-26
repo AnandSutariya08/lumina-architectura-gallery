@@ -74,8 +74,13 @@ export function Footer() {
           <div className="md:col-span-2">
             <p className="eyebrow !text-white/55 mb-6">Follow</p>
             <ul className="space-y-3 text-sm text-white/85">
-              {["Instagram", "Pinterest", "LinkedIn", "WhatsApp"].map((l) => (
-                <li key={l}><a href="#" className="hover:text-white transition-colors">{l}</a></li>
+              {[
+                { label: "Instagram", href: "#" },
+                { label: "Pinterest", href: "#" },
+                { label: "LinkedIn", href: "#" },
+                { label: "WhatsApp", href: "https://wa.me/919377555555?text=Hello%20House%20of%20Lumere%2C%20I%20would%20like%20to%20make%20an%20enquiry." },
+              ].map((l) => (
+                <li key={l.label}><a href={l.href} target={l.href !== "#" ? "_blank" : undefined} rel="noreferrer" className="hover:text-white transition-colors">{l.label}</a></li>
               ))}
             </ul>
           </div>

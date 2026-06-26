@@ -54,7 +54,7 @@ export function Contact() {
                 Send Inquiry
               </button>
               <a
-                href="https://wa.me/000000000?text=Hello%20House%20of%20Lumere"
+                href="https://wa.me/919377555555?text=Hello%20House%20of%20Lumere%2C%20I%20would%20like%20to%20make%20an%20enquiry."
                 target="_blank"
                 rel="noreferrer"
                 className="link-underline text-[11px] uppercase tracking-[0.28em]"

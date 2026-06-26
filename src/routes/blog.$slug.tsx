@@ -412,7 +412,7 @@ function BlogPostPage() {
                     ← Back to the Journal
                   </Link>
                   <a
-                    href={`https://wa.me/000000000?text=Hello%2C%20I%20read%20your%20essay%20on%20%22${encodeURIComponent(post.title)}%22%20and%20would%20like%20to%20discuss%20a%20project.`}
+                    href={`https://wa.me/919377555555?text=Hello%20House%20of%20Lumere%2C%20I%20read%20your%20essay%20on%20%22${encodeURIComponent(post.title)}%22%20and%20would%20like%20to%20discuss%20a%20project.`}
                     target="_blank"
                     rel="noreferrer"
                     className="inline-flex items-center gap-3 bg-foreground text-background px-8 py-4 text-[11px] uppercase tracking-[0.28em] hover:bg-foreground/90 transition-colors"
@@ -454,7 +454,7 @@ function BlogPostPage() {
                   We'll respond with a specification within 48 hours.
                 </p>
                 <a
-                  href="https://wa.me/000000000?text=Hello%2C%20I%20have%20a%20project%20I'd%20like%20to%20discuss."
+                  href="https://wa.me/919377555555?text=Hello%20House%20of%20Lumere%2C%20I%20have%20a%20project%20I%27d%20like%20to%20discuss."
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 border border-background/40 text-background text-[11px] uppercase tracking-[0.28em] px-6 py-3 hover:bg-background hover:text-foreground transition-colors duration-500 w-full justify-center"
