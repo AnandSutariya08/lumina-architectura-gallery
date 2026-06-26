@@ -3,9 +3,13 @@ import { Hero } from "@/components/lumere/Hero";
 import {
   HomeManifesto,
   HomeCollectionsEditorial,
+  HomeFeaturedProducts,
   HomeAtelier,
+  HomeProjects,
   HomeSignaturePiece,
+  HomeTestimonials,
   HomeEditorialStrip,
+  HomeProcess,
   HomeCommissionCTA,
 } from "@/components/lumere/HomeSections";
 
@@ -34,9 +38,13 @@ function Index() {
       <Hero />
       <HomeManifesto />
       <HomeCollectionsEditorial />
+      <HomeFeaturedProducts />
       <HomeAtelier />
+      <HomeProjects />
       <HomeSignaturePiece />
+      <HomeTestimonials />
       <HomeEditorialStrip />
+      <HomeProcess />
       <HomeCommissionCTA />
     </>
   );

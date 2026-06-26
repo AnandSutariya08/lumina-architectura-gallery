@@ -7,6 +7,12 @@ import crystal from "@/assets/signature-crystal.jpg";
 import modern from "@/assets/signature-modern.jpg";
 import aboutImg from "@/assets/about.jpg";
 import p1 from "@/assets/product-1.jpg";
+import p2 from "@/assets/product-2.jpg";
+import p3 from "@/assets/product-3.jpg";
+import p4 from "@/assets/product-4.jpg";
+import proj1 from "@/assets/project-1.jpg";
+import proj2 from "@/assets/project-2.jpg";
+import proj3 from "@/assets/project-3.jpg";
 
 /* ─────────────────────────────────────────────
    1. MANIFESTO — brand voice, lives only here
@@ -386,5 +392,284 @@ export function HomeCommissionCTA() {
         </div>
       </div>
     </section>
+  );
+}
+
+/* ─────────────────────────────────────────────
+   7. FEATURED PRODUCTS — curated product grid
+───────────────────────────────────────────── */
+const FEATURED = [
+  { slug: "aurelia-empire",        category: "chandeliers", name: "Aurelia Empire",     collection: "Crystal Collection",  badge: "Most Inquired", img: p1 },
+  { slug: "velluto-chandelier",    category: "chandeliers", name: "Velluto Chandelier", collection: "Crystal Collection",  badge: "Featured",      img: crystal },
+  { slug: "rotunda-grand",         category: "chandeliers", name: "Rotunda Grand",      collection: "Crystal Collection",  badge: "Limited",       img: p3 },
+  { slug: "arc-pendant",           category: "pendants",    name: "Arc Pendant",        collection: "Linear Collection",   badge: "New Arrival",   img: modern },
+];
+
+export function HomeFeaturedProducts() {
+  const ref = useReveal<HTMLDivElement>();
+  return (
+    <section className="bg-bone py-28 md:py-40 border-t border-border">
+      <div className="mx-auto max-w-[1600px] px-6 md:px-10 lg:px-14">
+        <div ref={ref} className="reveal flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-16 md:mb-24">
+          <div>
+            <p className="eyebrow mb-5">Most Inquired</p>
+            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl leading-[1.04]">
+              Pieces that define rooms.
+            </h2>
+          </div>
+          <Link to="/collections" className="hidden md:inline-flex items-center gap-3 link-underline text-[11px] uppercase tracking-[0.28em] shrink-0">
+            Browse All Pieces →
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
+          {FEATURED.map((p, i) => (
+            <ProductCard key={p.slug} product={p} index={i} />
+          ))}
+        </div>
+
+        <div className="mt-12 text-center md:hidden">
+          <Link to="/collections" className="inline-flex items-center gap-3 link-underline text-[11px] uppercase tracking-[0.28em]">
+            Browse All Pieces →
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ProductCard({ product: p, index }: { product: typeof FEATURED[number]; index: number }) {
+  const ref = useReveal<HTMLDivElement>();
+  return (
+    <div ref={ref} className="reveal group" style={{ transitionDelay: `${index * 80}ms` }}>
+      <Link to="/collections/$category/$product" params={{ category: p.category, product: p.slug }} className="block">
+        <div className="relative overflow-hidden bg-background aspect-[3/4]">
+          <img src={p.img} alt={p.name} loading="lazy"
+            className="h-full w-full object-cover transition-transform duration-[1800ms] ease-out group-hover:scale-[1.04]" />
+          {p.badge && (
+            <span className="absolute top-4 left-4 eyebrow !text-[10px] bg-background px-3 py-1.5">
+              {p.badge}
+            </span>
+          )}
+          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/15 transition-colors duration-700" />
+        </div>
+        <div className="mt-4">
+          <p className="eyebrow mb-2 text-muted-foreground">{p.collection}</p>
+          <h3 className="font-serif text-xl md:text-2xl">{p.name}</h3>
+          <p className="text-sm text-muted-foreground mt-1">Price on Request</p>
+        </div>
+      </Link>
+      <div className="mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+        <a
+          href={`https://wa.me/919377555555?text=Hello%20House%20of%20Lumere%2C%20I%20am%20interested%20in%20the%20${encodeURIComponent(p.name)}.%20Please%20share%20more%20details.`}
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex items-center gap-2 border border-foreground px-4 py-2.5 text-[10px] uppercase tracking-[0.22em] hover:bg-foreground hover:text-background transition-colors duration-300"
+        >
+          Inquire on WhatsApp
+        </a>
+      </div>
+    </div>
+  );
+}
+
+/* ─────────────────────────────────────────────
+   8. PROJECTS — 3 selected works
+───────────────────────────────────────────── */
+const HOME_PROJECTS = [
+  { slug: "maison-aurore",       title: "Maison Aurore",       type: "Private Residence · Paris",    img: proj1 },
+  { slug: "the-adler-penthouse", title: "The Adler Penthouse", type: "Penthouse · New York",         img: proj2 },
+  { slug: "restaurant-sera",     title: "Restaurant Sera",     type: "Hospitality · Milan",          img: proj3 },
+];
+
+export function HomeProjects() {
+  const ref = useReveal<HTMLDivElement>();
+  return (
+    <section className="bg-background py-28 md:py-40 border-t border-border">
+      <div className="mx-auto max-w-[1600px] px-6 md:px-10 lg:px-14">
+        <div ref={ref} className="reveal flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-16 md:mb-24">
+          <div>
+            <p className="eyebrow mb-5">Selected Works</p>
+            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl leading-[1.04]">
+              In residence.
+            </h2>
+          </div>
+          <Link to="/projects" className="hidden md:inline-flex items-center gap-3 link-underline text-[11px] uppercase tracking-[0.28em] shrink-0">
+            View All Projects →
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
+          {HOME_PROJECTS.map((p, i) => (
+            <ProjectCard key={p.slug} project={p} index={i} />
+          ))}
+        </div>
+
+        <div className="mt-12 text-center md:hidden">
+          <Link to="/projects" className="inline-flex items-center gap-3 link-underline text-[11px] uppercase tracking-[0.28em]">
+            View All Projects →
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ProjectCard({ project: p, index }: { project: typeof HOME_PROJECTS[number]; index: number }) {
+  const ref = useReveal<HTMLDivElement>();
+  return (
+    <div ref={ref} className="reveal" style={{ transitionDelay: `${index * 100}ms` }}>
+      <Link to="/projects/$slug" params={{ slug: p.slug }} className="group block">
+        <div className={`overflow-hidden bg-bone ${index === 1 ? "aspect-[4/5]" : "aspect-[4/3]"}`}>
+          <img src={p.img} alt={p.title} loading="lazy"
+            className="h-full w-full object-cover transition-transform duration-[1800ms] ease-out group-hover:scale-[1.04]" />
+        </div>
+        <div className="mt-5 flex items-start justify-between gap-4">
+          <h3 className="font-serif text-2xl md:text-3xl">{p.title}</h3>
+          <p className="eyebrow shrink-0 mt-1 text-right">{p.type}</p>
+        </div>
+      </Link>
+    </div>
+  );
+}
+
+/* ─────────────────────────────────────────────
+   9. TESTIMONIALS — client voices, dark bg
+───────────────────────────────────────────── */
+const QUOTES = [
+  {
+    q: "Lumere understood the room before we did. The light feels inevitable — as if it had always been there.",
+    name: "Élise Marchand",
+    role: "Marchand Studio · Paris",
+  },
+  {
+    q: "A rare house. Quiet, exacting, and entirely without pretence. We specify them on every villa now.",
+    name: "Raj Mehta",
+    role: "Atelier Mehta · Mumbai",
+  },
+  {
+    q: "The Aurelia Empire above our stair is the first thing every guest remarks upon. It is architecture, not decoration.",
+    name: "Sophia Reinhardt",
+    role: "Private Client · Zürich",
+  },
+];
+
+export function HomeTestimonials() {
+  const ref = useReveal<HTMLDivElement>();
+  return (
+    <section className="bg-foreground text-background py-28 md:py-40">
+      <div ref={ref} className="reveal mx-auto max-w-[1400px] px-6 md:px-10 lg:px-14">
+        <p className="eyebrow !text-background/50 text-center mb-20 md:mb-28 tracking-[0.3em]">
+          In Conversation
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-12">
+          {QUOTES.map((t, i) => (
+            <figure key={t.name} className="relative" style={{ transitionDelay: `${i * 100}ms` }}>
+              <span aria-hidden className="absolute -top-6 -left-2 font-serif text-[100px] leading-none text-white/10 select-none">"</span>
+              <blockquote className="relative font-serif text-xl md:text-2xl leading-[1.45] text-background">
+                {t.q}
+              </blockquote>
+              <figcaption className="mt-10 pt-8 border-t border-white/15">
+                <div className="text-sm font-medium text-background">{t.name}</div>
+                <div className="eyebrow mt-2 !text-background/50">{t.role}</div>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ─────────────────────────────────────────────
+   10. PROCESS — how we work, 4 steps
+───────────────────────────────────────────── */
+const STEPS = [
+  {
+    n: "01",
+    title: "Share Your Brief",
+    body: "Send us the room dimensions, ceiling height, preferred finish and any reference images. WhatsApp or the contact form — either works.",
+  },
+  {
+    n: "02",
+    title: "Specification Proposal",
+    body: "Within one working day, we return a full specification — fixture, drop height, finish options and a pricing proposal.",
+  },
+  {
+    n: "03",
+    title: "Built to Order",
+    body: "Your fixture is hand-assembled in solid brass, crystal or glass by our master artisans. Lead time is 6–10 weeks.",
+  },
+  {
+    n: "04",
+    title: "White-Glove Delivery",
+    body: "We ship worldwide with white-glove packaging, full installation drawings and direct after-sales support.",
+  },
+];
+
+export function HomeProcess() {
+  const ref = useReveal<HTMLDivElement>();
+  return (
+    <section className="bg-bone py-28 md:py-40 border-t border-border">
+      <div className="mx-auto max-w-[1600px] px-6 md:px-10 lg:px-14">
+        <div ref={ref} className="reveal grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start mb-20 md:mb-28">
+          <div>
+            <p className="eyebrow mb-5">How We Work</p>
+            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl leading-[1.04]">
+              From brief to<br />
+              <em className="not-italic text-muted-foreground">installation.</em>
+            </h2>
+          </div>
+          <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-lg lg:pt-16">
+            Every commission begins with a conversation. We work alongside
+            architects, interior designers and private clients to specify
+            lighting that is right for the room — not merely available.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 border-t border-border">
+          {STEPS.map((s, i) => (
+            <StepCard key={s.n} step={s} index={i} />
+          ))}
+        </div>
+
+        <div className="mt-16 flex flex-wrap gap-5">
+          <a
+            href="https://wa.me/919377555555?text=Hello%20House%20of%20Lumere%2C%20I%20would%20like%20to%20begin%20a%20commission."
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-3 bg-foreground text-background px-8 py-4 text-[11px] uppercase tracking-[0.28em] hover:bg-foreground/90 transition-colors duration-500"
+          >
+            Start on WhatsApp →
+          </a>
+          <Link
+            to="/contact"
+            className="inline-flex items-center gap-3 border border-foreground px-8 py-4 text-[11px] uppercase tracking-[0.28em] hover:bg-foreground hover:text-background transition-colors duration-500"
+          >
+            Contact Form →
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function StepCard({ step: s, index }: { step: typeof STEPS[number]; index: number }) {
+  const ref = useReveal<HTMLDivElement>();
+  return (
+    <div
+      ref={ref}
+      className="reveal border-t-0 border-l border-border first:border-l-0 pt-10 pb-10 pr-10 pl-0 first:pl-0"
+      style={{ transitionDelay: `${index * 100}ms`, paddingLeft: index === 0 ? 0 : undefined }}
+    >
+      <div
+        className="pl-0"
+        style={{ paddingLeft: index > 0 ? "2.5rem" : 0 }}
+      >
+        <span className="font-serif text-5xl text-muted-foreground/30 leading-none block mb-8">{s.n}</span>
+        <h3 className="font-medium text-base mb-4">{s.title}</h3>
+        <p className="text-sm text-muted-foreground leading-relaxed">{s.body}</p>
+      </div>
+    </div>
   );
 }
