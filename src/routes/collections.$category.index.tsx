@@ -188,7 +188,7 @@ function CategoryPage() {
               ← All collections
             </Link>
             <a
-              href="https://wa.me/000000000?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20the%20full%20catalogue."
+              href="https://wa.me/919377555555?text=Hello%20House%20of%20Lumere%2C%20I%20would%20like%20to%20receive%20the%20full%20catalogue%20and%20pricing%20guide."
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-3 bg-foreground text-background px-8 py-4 text-[11px] uppercase tracking-[0.28em] hover:bg-foreground/90 transition-colors"

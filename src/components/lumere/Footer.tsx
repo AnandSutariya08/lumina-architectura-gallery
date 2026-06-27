@@ -11,6 +11,7 @@ const COLS: { title: string; links: { label: string; to: string }[] }[] = [
       { label: "Ceiling", to: "/collections/ceiling" },
       { label: "Floor & Table", to: "/collections/floor-table" },
       { label: "Decorative", to: "/collections/decor" },
+      { label: "Outdoor", to: "/collections/outdoor" },
     ],
   },
   {
@@ -28,7 +29,7 @@ const COLS: { title: string; links: { label: string; to: string }[] }[] = [
       { label: "Contact", to: "/contact" },
       { label: "For Designers", to: "/contact" },
       { label: "For Architects", to: "/contact" },
-      { label: "Showrooms", to: "/contact" },
+      { label: "Showroom Visit", to: "/contact" },
     ],
   },
 ];
@@ -40,11 +41,29 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 pb-20 border-b border-white/15">
           <div className="md:col-span-4">
             <img src={logo} alt="House of Lumere" className="h-36 w-auto invert opacity-90" />
-            <p className="mt-10 max-w-sm text-white/65 text-sm leading-relaxed">
+            <p className="mt-8 max-w-sm text-white/65 text-sm leading-relaxed">
               House of Lumere — exclusive lighting and architectural fixtures,
               hand-assembled for residences, hotels and ateliers worldwide.
             </p>
-            <form className="mt-10 flex items-center border-b border-white/30 max-w-sm">
+
+            {/* Showroom address */}
+            <div className="mt-8 border-t border-white/15 pt-8">
+              <p className="eyebrow !text-white/40 mb-3">Showroom</p>
+              <p className="text-white/80 text-sm leading-relaxed">
+                House of Lumere<br />
+                Surat, Gujarat — India
+              </p>
+              <a
+                href="https://wa.me/919377555555?text=Hello%20House%20of%20Lumere%2C%20I%20would%20like%20to%20visit%20your%20showroom%20in%20Surat."
+                target="_blank"
+                rel="noreferrer"
+                className="mt-3 inline-block text-[11px] uppercase tracking-[0.28em] text-white/50 hover:text-white transition-colors"
+              >
+                +91 93775 55555
+              </a>
+            </div>
+
+            <form className="mt-8 flex items-center border-b border-white/30 max-w-sm">
               <input
                 type="email"
                 placeholder="Receive the journal"
@@ -72,15 +91,27 @@ export function Footer() {
           ))}
 
           <div className="md:col-span-2">
-            <p className="eyebrow !text-white/55 mb-6">Follow</p>
+            <p className="eyebrow !text-white/55 mb-6">Connect</p>
             <ul className="space-y-3 text-sm text-white/85">
               {[
                 { label: "Instagram", href: "#" },
                 { label: "Pinterest", href: "#" },
                 { label: "LinkedIn", href: "#" },
-                { label: "WhatsApp", href: "https://wa.me/919377555555?text=Hello%20House%20of%20Lumere%2C%20I%20would%20like%20to%20make%20an%20enquiry." },
+                {
+                  label: "WhatsApp",
+                  href: "https://wa.me/919377555555?text=Hello%20House%20of%20Lumere%2C%20I%20would%20like%20to%20make%20an%20enquiry.",
+                },
               ].map((l) => (
-                <li key={l.label}><a href={l.href} target={l.href !== "#" ? "_blank" : undefined} rel="noreferrer" className="hover:text-white transition-colors">{l.label}</a></li>
+                <li key={l.label}>
+                  <a
+                    href={l.href}
+                    target={l.href !== "#" ? "_blank" : undefined}
+                    rel="noreferrer"
+                    className="hover:text-white transition-colors"
+                  >
+                    {l.label}
+                  </a>
+                </li>
               ))}
             </ul>
           </div>
@@ -88,6 +119,7 @@ export function Footer() {
 
         <div className="pt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-[11px] uppercase tracking-[0.28em] text-white/55">
           <p>© {new Date().getFullYear()} House of Lumere. All rights reserved.</p>
+          <p className="text-white/35">Surat · Gujarat · India</p>
           <div className="flex gap-8">
             <a href="#" className="hover:text-white">Privacy</a>
             <a href="#" className="hover:text-white">Terms</a>
