@@ -195,33 +195,39 @@ export function Nav() {
 
       {mobileOpen && (
         <div className="lg:hidden border-t border-border bg-background/98 backdrop-blur-md">
-          <div className="mx-auto max-w-[1600px] px-6 py-8 space-y-1">
-            <Link
-              to="/collections"
-              className="block py-3 text-[12px] uppercase tracking-[0.28em] text-foreground/80 hover:text-foreground transition-colors border-b border-border"
-            >
-              All Collections
-            </Link>
-            {CATEGORIES.map((c) => (
-              <Link
-                key={c.slug}
-                to="/collections/$category"
-                params={{ category: c.slug }}
-                className="block py-2 pl-4 text-[11px] uppercase tracking-[0.22em] text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {c.title}
-              </Link>
-            ))}
-            {NAV.filter((n) => !n.hasDropdown).map((n) => (
-              <Link
-                key={n.label}
-                to={n.to}
-                className="block py-3 text-[12px] uppercase tracking-[0.28em] text-foreground/80 hover:text-foreground transition-colors border-t border-border"
-              >
-                {n.label}
-              </Link>
-            ))}
-            <div className="pt-6 border-t border-border">
+          <div className="mx-auto max-w-[1600px] px-6 py-8">
+            {NAV.map((n) =>
+              n.hasDropdown ? (
+                <div key={n.label} className="border-b border-border">
+                  <Link
+                    to="/collections"
+                    className="block py-3 text-[12px] uppercase tracking-[0.28em] text-foreground/80 hover:text-foreground transition-colors"
+                  >
+                    All Collections
+                  </Link>
+                  {CATEGORIES.map((c) => (
+                    <Link
+                      key={c.slug}
+                      to="/collections/$category"
+                      params={{ category: c.slug }}
+                      className="block py-2 pl-4 text-[11px] uppercase tracking-[0.22em] text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      {c.title}
+                    </Link>
+                  ))}
+                  <div className="pb-1" />
+                </div>
+              ) : (
+                <Link
+                  key={n.label}
+                  to={n.to}
+                  className="block py-3 text-[12px] uppercase tracking-[0.28em] text-foreground/80 hover:text-foreground transition-colors border-b border-border"
+                >
+                  {n.label}
+                </Link>
+              )
+            )}
+            <div className="pt-6">
               <a
                 href="https://wa.me/919377555555?text=Hello%20House%20of%20Lumere%2C%20I%20would%20like%20to%20make%20an%20enquiry."
                 target="_blank"
