@@ -357,7 +357,6 @@ export function HomeHowToBegin() {
             loading="lazy"
             style={{ transform: "rotate(90deg) scale(1.44)" }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-bone/80 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-bone/40" />
           <div className="absolute bottom-8 left-8 right-8 lg:hidden">
             <p className="font-serif text-xl text-foreground">Restaurant Sera, Milan — 42 sconces, one brief, three months.</p>
           </div>
@@ -639,7 +638,7 @@ export function HomeFloorTableInterlude() {
             alt="House of Lumere floor lamps and table lighting"
             className="absolute inset-0 h-full w-full object-cover"
             loading="lazy"
-           
+            style={{ transform: "rotate(-45deg) scale(1.44)" }}
           />
         </div>
       </div>
