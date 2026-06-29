@@ -1,11 +1,11 @@
 import { Link } from "@tanstack/react-router";
 import { useReveal } from "@/hooks/use-reveal";
-import n1 from "@/assets/new-1.png";
-import n2 from "@/assets/new-2.png";
+import n1 from "@/assets/new-1.jpg";
+import n2 from "@/assets/new-2.jpg";
 import n7 from "@/assets/new-7.jpg";
-import n4 from "@/assets/new-4.png";
+import n4 from "@/assets/new-4.jpg";
 import n8 from "@/assets/new-8.jpg";
-import n6 from "@/assets/new-6.png";
+import n6 from "@/assets/new-6.jpg";
 
 /* ─────────────────────────────────────────────
    1. PHILOSOPHY — the Lumere worldview, homepage-only
