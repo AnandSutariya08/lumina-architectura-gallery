@@ -638,7 +638,7 @@ export function HomeFloorTableInterlude() {
             alt="House of Lumere floor lamps and table lighting"
             className="absolute inset-0 h-full w-full object-cover"
             loading="lazy"
-            style={{ transform: "rotate(90deg) scale(1.44)" }}
+            style={{ transform: "rotate(270deg) scale(1.44)" }}
           />
         </div>
       </div>
