@@ -20,7 +20,7 @@ export function HomePhilosophy() {
             src={n4}
             alt="Blue crystal chandelier — House of Lumere"
             className="absolute inset-0 h-full w-full object-cover opacity-70"
-            style={{ transform: "rotate(-45deg) scale(1.44)" }}
+           
           />
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/60 to-transparent" />
           {/* Floating material label */}
@@ -145,7 +145,7 @@ function MaterialCard({
           alt={m.name}
           loading="lazy"
           className="h-full w-full object-cover transition-transform duration-[2000ms] ease-out group-hover:scale-[1.04]"
-          style={{ transform: "rotate(-45deg) scale(1.44)" }}
+         
         />
       </div>
       <div className="p-8 md:p-10">
@@ -183,7 +183,7 @@ export function HomeShowroom() {
                 alt="House of Lumere showroom — chandeliers"
                 loading="lazy"
                 className="h-full w-full object-cover"
-                style={{ transform: "rotate(-45deg) scale(1.44)" }}
+               
               />
             </div>
             <div className="overflow-hidden aspect-[3/4] mt-12">
@@ -192,7 +192,7 @@ export function HomeShowroom() {
                 alt="House of Lumere showroom — sconces"
                 loading="lazy"
                 className="h-full w-full object-cover"
-                style={{ transform: "rotate(-45deg) scale(1.44)" }}
+               
               />
             </div>
           </div>
@@ -269,14 +269,14 @@ export function HomeRoomStory() {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-16">
           <div className="lg:col-span-8 overflow-hidden aspect-[16/9]">
-            <img src={n1} alt="Mehta Residence double-height foyer — House of Lumere" className="h-full w-full object-cover" loading="lazy" style={{ transform: "rotate(-45deg) scale(1.44)" }} />
+            <img src={n1} alt="Mehta Residence double-height foyer — House of Lumere" className="h-full w-full object-cover" loading="lazy" />
           </div>
           <div className="lg:col-span-4 grid grid-rows-2 gap-6">
             <div className="overflow-hidden">
-              <img src={n2} alt="Aurelia Empire chandelier detail" className="h-full w-full object-cover aspect-video lg:aspect-auto" loading="lazy" style={{ transform: "rotate(-45deg) scale(1.44)" }} />
+              <img src={n2} alt="Aurelia Empire chandelier detail" className="h-full w-full object-cover aspect-video lg:aspect-auto" loading="lazy" />
             </div>
             <div className="overflow-hidden">
-              <img src={n3} alt="Brass finish detail" className="h-full w-full object-cover aspect-video lg:aspect-auto" loading="lazy" style={{ transform: "rotate(-45deg) scale(1.44)" }} />
+              <img src={n3} alt="Brass finish detail" className="h-full w-full object-cover aspect-video lg:aspect-auto" loading="lazy" />
             </div>
           </div>
         </div>
@@ -355,7 +355,7 @@ export function HomeHowToBegin() {
             alt="Lumere installation — restaurant Sera, Milan"
             className="absolute inset-0 h-full w-full object-cover"
             loading="lazy"
-            style={{ transform: "rotate(-45deg) scale(1.44)" }}
+           
           />
           <div className="absolute inset-0 bg-gradient-to-t from-bone/80 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-bone/40" />
           <div className="absolute bottom-8 left-8 right-8 lg:hidden">
@@ -430,7 +430,7 @@ export function HomeEditorialPull() {
         alt="House of Lumere atelier — light and space"
         className="absolute inset-0 h-full w-full object-cover opacity-50"
         loading="lazy"
-        style={{ transform: "rotate(-45deg) scale(1.44)" }}
+       
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
 
@@ -511,7 +511,7 @@ function FeaturedCard({ product: p, index }: { product: typeof FEATURED[number];
           alt={p.name}
           loading="lazy"
           className="h-full w-full object-cover transition-transform duration-[1800ms] ease-out group-hover:scale-[1.04]"
-          style={{ transform: "rotate(-45deg) scale(1.44)" }}
+         
         />
         {p.badge && (
           <span className="absolute top-4 left-4 eyebrow !text-[9px] bg-background px-3 py-1.5">
@@ -639,7 +639,7 @@ export function HomeFloorTableInterlude() {
             alt="House of Lumere floor lamps and table lighting"
             className="absolute inset-0 h-full w-full object-cover"
             loading="lazy"
-            style={{ transform: "rotate(-45deg) scale(1.44)" }}
+           
           />
         </div>
       </div>
