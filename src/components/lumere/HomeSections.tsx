@@ -2,9 +2,9 @@ import { Link } from "@tanstack/react-router";
 import { useReveal } from "@/hooks/use-reveal";
 import n1 from "@/assets/new-1.png";
 import n2 from "@/assets/new-2.png";
-import n3 from "@/assets/new-3.png";
+import n7 from "@/assets/new-7.jpg";
 import n4 from "@/assets/new-4.png";
-import n5 from "@/assets/new-5.png";
+import n8 from "@/assets/new-8.jpg";
 import n6 from "@/assets/new-6.png";
 
 /* ─────────────────────────────────────────────
@@ -85,14 +85,14 @@ export function HomeMaterials() {
     {
       name: "Bohemian Crystal",
       grade: "30% full lead crystal",
-      img: n3,
+      img: n7,
       text: "Hand-cut in the Bohemian tradition by a fourth-generation cutting family. Each drop is individually checked for optical clarity before stringing. No two pendants are identical — the cuts are made by hand, and the hand is never perfectly repeated.",
       finish: "Clear · Smoke · Champagne",
     },
     {
       name: "Spanish Alabaster",
       grade: "Aragon quarry, single-seam",
-      img: n5,
+      img: n8,
       text: "Carved in slabs 8–12 mm thin — thin enough to transmit light, thick enough to hold structure. Sourced from a single quarrier in Aragon whose family has worked the same seam for sixty years. Each piece is unique in veining and translucency.",
       finish: "Natural · Warm white · Honey",
     },
@@ -276,7 +276,7 @@ export function HomeRoomStory() {
               <img src={n2} alt="Aurelia Empire chandelier detail" className="h-full w-full object-cover aspect-video lg:aspect-auto" loading="lazy" />
             </div>
             <div className="overflow-hidden">
-              <img src={n3} alt="Brass finish detail" className="h-full w-full object-cover aspect-video lg:aspect-auto" loading="lazy" />
+              <img src={n7} alt="Brass finish detail" className="h-full w-full object-cover aspect-video lg:aspect-auto" loading="lazy" />
             </div>
           </div>
         </div>
@@ -351,11 +351,11 @@ export function HomeHowToBegin() {
         {/* Left: image */}
         <div className="relative min-h-[400px] lg:min-h-0 order-2 lg:order-1">
           <img
-            src={n5}
+            src={n8}
             alt="Lumere installation — restaurant Sera, Milan"
             className="absolute inset-0 h-full w-full object-cover"
             loading="lazy"
-           
+            style={{ transform: "rotate(90deg) scale(1.44)" }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-bone/80 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-bone/40" />
           <div className="absolute bottom-8 left-8 right-8 lg:hidden">
@@ -455,7 +455,7 @@ export function HomeEditorialPull() {
 ───────────────────────────────────────────── */
 const FEATURED = [
   { slug: "grand-palais-chandelier", category: "chandeliers", name: "Grand Palais Chandelier", ref: "LM-CH-001", desc: "Eighteen arms, 340 hand-cut Bohemian crystal drops. Ø 120 cm.", badge: "Signature Piece", img: n2 },
-  { slug: "halo-sconce",             category: "wall",        name: "Halo Sconce",             ref: "LM-WS-001", desc: "Brass ring with opal glass diffuser. Hand-blown in Murano.", badge: "Most Inquired",  img: n3 },
+  { slug: "halo-sconce",             category: "wall",        name: "Halo Sconce",             ref: "LM-WS-001", desc: "Brass ring with opal glass diffuser. Hand-blown in Murano.", badge: "Most Inquired",  img: n7 },
   { slug: "alabaster-disk",          category: "ceiling",     name: "Alabaster Disk",           ref: "LM-CL-003", desc: "Ø 55 cm, Spanish alabaster. Each piece unique in veining.", badge: "Limited stock",  img: n4 },
   { slug: "arc-pendant",             category: "pendants",    name: "Arc Pendant",              ref: "LM-PE-002", desc: "Brushed brass arc, single filament, minimal geometry.", badge: "New Arrival",    img: n1 },
 ];
