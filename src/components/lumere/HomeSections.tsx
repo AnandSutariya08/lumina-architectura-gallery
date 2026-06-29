@@ -349,7 +349,7 @@ export function HomeHowToBegin() {
     <section className="bg-bone border-t border-border overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
         {/* Left: image */}
-        <div className="relative min-h-[400px] lg:min-h-0 order-2 lg:order-1">
+        <div className="relative min-h-[400px] lg:min-h-0 order-2 lg:order-1 overflow-hidden">
           <img
             src={n8}
             alt="Lumere installation — restaurant Sera, Milan"
@@ -638,7 +638,7 @@ export function HomeFloorTableInterlude() {
             alt="House of Lumere floor lamps and table lighting"
             className="absolute inset-0 h-full w-full object-cover"
             loading="lazy"
-            style={{ transform: "rotate(-45deg) scale(1.44)" }}
+            style={{ transform: "rotate(90deg) scale(1.44)" }}
           />
         </div>
       </div>
