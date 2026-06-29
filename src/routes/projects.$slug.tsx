@@ -298,10 +298,10 @@ function ProjectDetailPage() {
                   {proj.specs.map((s) => (
                     <div
                       key={s.label}
-                      className="flex justify-between py-4 border-b border-border gap-6"
+                      className="flex flex-col sm:flex-row sm:justify-between py-4 border-b border-border gap-1 sm:gap-6"
                     >
                       <dt className="text-muted-foreground text-sm">{s.label}</dt>
-                      <dd className="font-medium text-sm text-right">{s.value}</dd>
+                      <dd className="font-medium text-sm sm:text-right">{s.value}</dd>
                     </div>
                   ))}
                 </dl>
@@ -310,7 +310,7 @@ function ProjectDetailPage() {
               {/* Gallery strip */}
               <div>
                 <p className="eyebrow mb-6">Installation Images</p>
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {proj.gallery.map((img, i) => (
                     <div key={i} className="overflow-hidden bg-bone aspect-square">
                       <img

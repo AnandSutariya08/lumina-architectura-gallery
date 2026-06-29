@@ -44,7 +44,7 @@ export function HomePhilosophy() {
             stone, before the art. At House of Lumere, every chandelier, every sconce,
             every pendant is built to answer one question: what does this room need to become?
           </p>
-          <div className="grid grid-cols-3 gap-6 border-t border-white/15 pt-12 mb-14">
+          <div className="grid grid-cols-3 gap-3 sm:gap-5 md:gap-6 border-t border-white/15 pt-10 md:pt-12 mb-10 md:mb-14">
             {[
               ["10+", "Years in craft"],
               ["220+", "Commissions"],
@@ -357,8 +357,8 @@ export function HomeHowToBegin() {
             loading="lazy"
             style={{ transform: "rotate(90deg) scale(1.44)" }}
           />
-          <div className="absolute bottom-8 left-8 right-8 lg:hidden">
-            <p className="font-serif text-xl text-foreground">Restaurant Sera, Milan — 42 sconces, one brief, three months.</p>
+          <div className="absolute bottom-0 left-0 right-0 lg:hidden bg-gradient-to-t from-black/70 to-transparent px-8 pb-8 pt-16">
+            <p className="font-serif text-lg text-white/90">Restaurant Sera, Milan — 42 sconces, one brief, three months.</p>
           </div>
         </div>
 

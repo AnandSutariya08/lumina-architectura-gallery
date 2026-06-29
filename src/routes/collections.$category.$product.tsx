@@ -94,7 +94,7 @@ function ProductPage() {
                 )}
               </div>
               {p.images.length > 1 && (
-                <div className="grid grid-cols-4 gap-3">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                   {p.images.map((img, i) => (
                     <button
                       key={i}
@@ -239,7 +239,7 @@ function ProductPage() {
                   ].map(([label, value]) => (
                     <div
                       key={label}
-                      className="grid grid-cols-2 gap-8 border-b border-border pb-6"
+                      className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-8 border-b border-border pb-6"
                     >
                       <dt className="eyebrow">{label}</dt>
                       <dd className="text-sm text-muted-foreground leading-relaxed">

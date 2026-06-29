@@ -29,7 +29,7 @@ export function About() {
               metal for four generations.
             </p>
           </div>
-          <div className="mt-14 grid grid-cols-3 gap-8 border-t border-border pt-10">
+          <div className="mt-14 grid grid-cols-3 gap-3 sm:gap-6 md:gap-8 border-t border-border pt-10">
             {[
               ["10+", "Years of practice"],
               ["220", "Realised projects"],

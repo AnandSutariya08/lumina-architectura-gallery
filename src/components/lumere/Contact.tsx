@@ -35,11 +35,11 @@ export function Contact() {
           </h2>
 
           <form className="space-y-8 max-w-xl">
-            <div className="grid grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
               <Field label="Name" />
               <Field label="Phone" type="tel" />
             </div>
-            <div className="grid grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
               <Field label="Email" type="email" />
               <Field label="City" />
             </div>
