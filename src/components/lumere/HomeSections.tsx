@@ -32,10 +32,10 @@ export function HomePhilosophy() {
 
         <div
           ref={ref}
-          className="reveal order-1 lg:order-2 flex flex-col justify-center px-8 md:px-16 lg:px-20 xl:px-28 py-24"
+          className="reveal order-1 lg:order-2 flex flex-col justify-center px-8 md:px-16 lg:px-20 xl:px-28 py-14 md:py-24"
         >
-          <p className="eyebrow !text-background/45 mb-10 tracking-[0.3em]">Surat · Est. 2014 · India</p>
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-[60px] leading-[1.06] text-background mb-10">
+          <p className="eyebrow !text-background/45 mb-6 md:mb-10 tracking-[0.3em]">Surat · Est. 2014 · India</p>
+          <h2 className="font-serif text-3xl md:text-5xl lg:text-[60px] leading-[1.06] text-background mb-8 md:mb-10">
             We do not sell fixtures.<br />
             <em className="not-italic text-background/40">We compose rooms.</em>
           </h2>
@@ -99,12 +99,12 @@ export function HomeMaterials() {
   ];
 
   return (
-    <section className="bg-bone py-28 md:py-40 border-t border-border">
+    <section className="bg-bone py-16 md:py-40 border-t border-border">
       <div className="mx-auto max-w-[1600px] px-6 md:px-10 lg:px-14">
-        <div ref={ref} className="reveal mb-20 md:mb-28">
+        <div ref={ref} className="reveal mb-12 md:mb-28">
           <p className="eyebrow mb-5">The Materials</p>
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl leading-[1.04] max-w-xl">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 md:gap-8">
+            <h2 className="font-serif text-3xl md:text-5xl lg:text-6xl leading-[1.04] max-w-xl">
               Three materials.<br />
               <em className="not-italic text-muted-foreground">Chosen once. Kept forever.</em>
             </h2>
@@ -172,9 +172,9 @@ export function HomeShowroom() {
     <section className="bg-foreground text-background">
       <div
         ref={ref}
-        className="reveal mx-auto max-w-[1600px] px-6 md:px-10 lg:px-14 py-28 md:py-40"
+        className="reveal mx-auto max-w-[1600px] px-6 md:px-10 lg:px-14 py-16 md:py-40"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-24">
           {/* Left: images */}
           <div className="lg:col-span-7 grid grid-cols-2 gap-3">
             <div className="overflow-hidden aspect-[3/4]">
@@ -200,7 +200,7 @@ export function HomeShowroom() {
           {/* Right: showroom details */}
           <div className="lg:col-span-5 flex flex-col justify-center">
             <p className="eyebrow !text-background/45 mb-8">Our Showroom</p>
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-[56px] leading-[1.04] text-background mb-10">
+            <h2 className="font-serif text-3xl md:text-5xl lg:text-[56px] leading-[1.04] text-background mb-8 md:mb-10">
               Visit us in<br />
               <em className="not-italic text-background/40">Surat, Gujarat.</em>
             </h2>
@@ -257,11 +257,11 @@ export function HomeShowroom() {
 export function HomeRoomStory() {
   const ref = useReveal<HTMLDivElement>();
   return (
-    <section className="bg-background py-28 md:py-40 border-t border-border overflow-hidden">
+    <section className="bg-background py-16 md:py-40 border-t border-border overflow-hidden">
       <div className="mx-auto max-w-[1600px] px-6 md:px-10 lg:px-14">
-        <div ref={ref} className="reveal mb-16 md:mb-20">
+        <div ref={ref} className="reveal mb-10 md:mb-20">
           <p className="eyebrow mb-4">A Room, Transformed</p>
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl leading-[1.04] max-w-3xl">
+          <h2 className="font-serif text-3xl md:text-5xl lg:text-6xl leading-[1.04] max-w-3xl">
             The Mehta Residence —<br />
             <em className="not-italic text-muted-foreground">Ahmedabad, 2025.</em>
           </h2>
@@ -365,15 +365,15 @@ export function HomeHowToBegin() {
         {/* Right: steps */}
         <div
           ref={ref}
-          className="reveal order-1 lg:order-2 flex flex-col justify-center px-8 md:px-16 lg:px-20 xl:px-24 py-24"
+          className="reveal order-1 lg:order-2 flex flex-col justify-center px-6 md:px-16 lg:px-20 xl:px-24 py-12 md:py-24"
         >
-          <p className="eyebrow mb-8">How to begin</p>
-          <h2 className="font-serif text-4xl md:text-5xl leading-[1.05] mb-14">
+          <p className="eyebrow mb-6">How to begin</p>
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl leading-[1.05] mb-8 md:mb-12">
             Three things<br />
             <em className="not-italic text-muted-foreground">to send us first.</em>
           </h2>
 
-          <div className="space-y-0 mb-14">
+          <div className="space-y-0 mb-8 md:mb-12">
             {[
               {
                 n: "01",
