@@ -155,13 +155,8 @@
 }
 
 @utility reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 1100ms cubic-bezier(0.2,0.6,0.2,1), transform 1100ms cubic-bezier(0.2,0.6,0.2,1);
-  &.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @utility hero-zoom {
