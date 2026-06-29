@@ -1,17 +1,11 @@
 import { Link } from "@tanstack/react-router";
 import { useReveal } from "@/hooks/use-reveal";
-import crystal from "@/assets/signature-crystal.jpg";
-import modern from "@/assets/signature-modern.jpg";
-import aboutImg from "@/assets/about.jpg";
-import p1 from "@/assets/product-1.jpg";
-import p2 from "@/assets/product-2.jpg";
-import p3 from "@/assets/product-3.jpg";
-import p4 from "@/assets/product-4.jpg";
-import proj1 from "@/assets/project-1.jpg";
-import proj3 from "@/assets/project-3.jpg";
-import chand from "@/assets/collection-chandeliers.jpg";
-import wall from "@/assets/collection-wall.jpg";
-import floor from "@/assets/collection-floor.jpg";
+import n1 from "@/assets/new-1.png";
+import n2 from "@/assets/new-2.png";
+import n3 from "@/assets/new-3.png";
+import n4 from "@/assets/new-4.png";
+import n5 from "@/assets/new-5.png";
+import n6 from "@/assets/new-6.png";
 
 /* ─────────────────────────────────────────────
    1. PHILOSOPHY — the Lumere worldview, homepage-only
@@ -23,9 +17,10 @@ export function HomePhilosophy() {
       <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[700px]">
         <div className="relative order-2 lg:order-1 min-h-[400px] lg:min-h-0">
           <img
-            src={crystal}
-            alt="Brass crystal chandelier detail — House of Lumere"
+            src={n4}
+            alt="Blue crystal chandelier — House of Lumere"
             className="absolute inset-0 h-full w-full object-cover opacity-70"
+            style={{ transform: "rotate(-45deg) scale(1.44)" }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/60 to-transparent" />
           {/* Floating material label */}
@@ -83,21 +78,21 @@ export function HomeMaterials() {
     {
       name: "Solid Brass",
       grade: "Naval grade C46400",
-      img: p2,
+      img: n1,
       text: "Spun and planished by hand in our Jaipur atelier. Naval brass — 80% copper, 20% zinc — is chosen for its density, colour and the depth of patina it develops over decades. Every shade is finished by a single craftsman, never on a production line.",
       finish: "Polished · Brushed · Aged · Blackened",
     },
     {
       name: "Bohemian Crystal",
       grade: "30% full lead crystal",
-      img: p1,
+      img: n3,
       text: "Hand-cut in the Bohemian tradition by a fourth-generation cutting family. Each drop is individually checked for optical clarity before stringing. No two pendants are identical — the cuts are made by hand, and the hand is never perfectly repeated.",
       finish: "Clear · Smoke · Champagne",
     },
     {
       name: "Spanish Alabaster",
       grade: "Aragon quarry, single-seam",
-      img: p3,
+      img: n5,
       text: "Carved in slabs 8–12 mm thin — thin enough to transmit light, thick enough to hold structure. Sourced from a single quarrier in Aragon whose family has worked the same seam for sixty years. Each piece is unique in veining and translucency.",
       finish: "Natural · Warm white · Honey",
     },
@@ -150,6 +145,7 @@ function MaterialCard({
           alt={m.name}
           loading="lazy"
           className="h-full w-full object-cover transition-transform duration-[2000ms] ease-out group-hover:scale-[1.04]"
+          style={{ transform: "rotate(-45deg) scale(1.44)" }}
         />
       </div>
       <div className="p-8 md:p-10">
@@ -183,18 +179,20 @@ export function HomeShowroom() {
           <div className="lg:col-span-7 grid grid-cols-2 gap-3">
             <div className="overflow-hidden aspect-[3/4]">
               <img
-                src={chand}
+                src={n2}
                 alt="House of Lumere showroom — chandeliers"
                 loading="lazy"
                 className="h-full w-full object-cover"
+                style={{ transform: "rotate(-45deg) scale(1.44)" }}
               />
             </div>
             <div className="overflow-hidden aspect-[3/4] mt-12">
               <img
-                src={wall}
+                src={n4}
                 alt="House of Lumere showroom — sconces"
                 loading="lazy"
                 className="h-full w-full object-cover"
+                style={{ transform: "rotate(-45deg) scale(1.44)" }}
               />
             </div>
           </div>
@@ -271,14 +269,14 @@ export function HomeRoomStory() {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-16">
           <div className="lg:col-span-8 overflow-hidden aspect-[16/9]">
-            <img src={proj1} alt="Mehta Residence double-height foyer — House of Lumere" className="h-full w-full object-cover" loading="lazy" />
+            <img src={n1} alt="Mehta Residence double-height foyer — House of Lumere" className="h-full w-full object-cover" loading="lazy" style={{ transform: "rotate(-45deg) scale(1.44)" }} />
           </div>
           <div className="lg:col-span-4 grid grid-rows-2 gap-6">
             <div className="overflow-hidden">
-              <img src={p1} alt="Aurelia Empire chandelier detail" className="h-full w-full object-cover aspect-video lg:aspect-auto" loading="lazy" />
+              <img src={n2} alt="Aurelia Empire chandelier detail" className="h-full w-full object-cover aspect-video lg:aspect-auto" loading="lazy" style={{ transform: "rotate(-45deg) scale(1.44)" }} />
             </div>
             <div className="overflow-hidden">
-              <img src={modern} alt="Brass finish detail" className="h-full w-full object-cover aspect-video lg:aspect-auto" loading="lazy" />
+              <img src={n3} alt="Brass finish detail" className="h-full w-full object-cover aspect-video lg:aspect-auto" loading="lazy" style={{ transform: "rotate(-45deg) scale(1.44)" }} />
             </div>
           </div>
         </div>
@@ -353,10 +351,11 @@ export function HomeHowToBegin() {
         {/* Left: image */}
         <div className="relative min-h-[400px] lg:min-h-0 order-2 lg:order-1">
           <img
-            src={proj3}
+            src={n5}
             alt="Lumere installation — restaurant Sera, Milan"
             className="absolute inset-0 h-full w-full object-cover"
             loading="lazy"
+            style={{ transform: "rotate(-45deg) scale(1.44)" }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-bone/80 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-bone/40" />
           <div className="absolute bottom-8 left-8 right-8 lg:hidden">
@@ -427,10 +426,11 @@ export function HomeEditorialPull() {
   return (
     <section className="relative h-[65vh] md:h-[75vh] overflow-hidden bg-[#1a1814]">
       <img
-        src={aboutImg}
+        src={n6}
         alt="House of Lumere atelier — light and space"
         className="absolute inset-0 h-full w-full object-cover opacity-50"
         loading="lazy"
+        style={{ transform: "rotate(-45deg) scale(1.44)" }}
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
 
@@ -454,10 +454,10 @@ export function HomeEditorialPull() {
    7. FEATURED PIECES — 4 products, unique card style
 ───────────────────────────────────────────── */
 const FEATURED = [
-  { slug: "grand-palais-chandelier", category: "chandeliers", name: "Grand Palais Chandelier", ref: "LM-CH-001", desc: "Eighteen arms, 340 hand-cut Bohemian crystal drops. Ø 120 cm.", badge: "Signature Piece", img: p1 },
-  { slug: "halo-sconce",             category: "wall",        name: "Halo Sconce",             ref: "LM-WS-001", desc: "Brass ring with opal glass diffuser. Hand-blown in Murano.", badge: "Most Inquired",  img: p2 },
-  { slug: "alabaster-disk",          category: "ceiling",     name: "Alabaster Disk",           ref: "LM-CL-003", desc: "Ø 55 cm, Spanish alabaster. Each piece unique in veining.", badge: "Limited stock",  img: p3 },
-  { slug: "arc-pendant",             category: "pendants",    name: "Arc Pendant",              ref: "LM-PE-002", desc: "Brushed brass arc, single filament, minimal geometry.", badge: "New Arrival",    img: p4 },
+  { slug: "grand-palais-chandelier", category: "chandeliers", name: "Grand Palais Chandelier", ref: "LM-CH-001", desc: "Eighteen arms, 340 hand-cut Bohemian crystal drops. Ø 120 cm.", badge: "Signature Piece", img: n2 },
+  { slug: "halo-sconce",             category: "wall",        name: "Halo Sconce",             ref: "LM-WS-001", desc: "Brass ring with opal glass diffuser. Hand-blown in Murano.", badge: "Most Inquired",  img: n3 },
+  { slug: "alabaster-disk",          category: "ceiling",     name: "Alabaster Disk",           ref: "LM-CL-003", desc: "Ø 55 cm, Spanish alabaster. Each piece unique in veining.", badge: "Limited stock",  img: n4 },
+  { slug: "arc-pendant",             category: "pendants",    name: "Arc Pendant",              ref: "LM-PE-002", desc: "Brushed brass arc, single filament, minimal geometry.", badge: "New Arrival",    img: n1 },
 ];
 
 export function HomeFeaturedPieces() {
@@ -511,6 +511,7 @@ function FeaturedCard({ product: p, index }: { product: typeof FEATURED[number];
           alt={p.name}
           loading="lazy"
           className="h-full w-full object-cover transition-transform duration-[1800ms] ease-out group-hover:scale-[1.04]"
+          style={{ transform: "rotate(-45deg) scale(1.44)" }}
         />
         {p.badge && (
           <span className="absolute top-4 left-4 eyebrow !text-[9px] bg-background px-3 py-1.5">
@@ -634,10 +635,11 @@ export function HomeFloorTableInterlude() {
         </div>
         <div className="relative min-h-[400px] lg:min-h-0">
           <img
-            src={floor}
+            src={n6}
             alt="House of Lumere floor lamps and table lighting"
             className="absolute inset-0 h-full w-full object-cover"
             loading="lazy"
+            style={{ transform: "rotate(-45deg) scale(1.44)" }}
           />
         </div>
       </div>
